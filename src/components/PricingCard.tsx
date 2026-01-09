@@ -48,7 +48,7 @@ const PricingCard = ({
         </div>
       )}
 
-      <div className="mb-6">
+      <div className="mb-6 mt-4">
         <h3 className="font-semibold text-foreground mb-2">{name}</h3>
         <div className="flex items-baseline gap-1">
           <span className="text-3xl md:text-4xl font-bold text-foreground">₦{price}</span>
