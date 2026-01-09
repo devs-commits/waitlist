@@ -3,7 +3,7 @@ import NavbarDark from '../components/NavBarDark';
 import HeroSectionDark from '../components/HeroSectionDark';
 import ArsenalSection from '../components/ArsenalSection';
 import ChatSectionDark from '../components/ChatSectionDark';
-// import PricingSection from '@/components/PricingSection';
+import PricingSection from '../components/PricingSection';
 // import CTASectionDark from '@/components/CTASectionDark';
 // import FooterDark from '@/components/FooterDark';
 import WaitlistModal from '../components/WaitlistModal';
@@ -14,23 +14,23 @@ const HomeDark = () => {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
   const [isSponsorOpen, setIsSponsorOpen] = useState(false);
   const [isSuccessOpen, setIsSuccessOpen] = useState(false);
-  const [selectedPlan] = useState({ name: '', price: '' });
+  const [selectedPlan, setSelectedPlan] = useState({ name: '', price: '' });
 
   const handleWaitlistSuccess = () => {
     setIsSuccessOpen(true);
   };
 
-//   const handleWaitlistClick = (planName?: string) => {
-//     if (planName) {
-//       setSelectedPlan({ name: planName, price: '' });
-//     }
-//     setIsWaitlistOpen(true);
-//   };
+  const handleWaitlistClick = (planName?: string) => {
+    if (planName) {
+      setSelectedPlan({ name: planName, price: '' });
+    }
+    setIsWaitlistOpen(true);
+  };
 
-//   const handleSponsorClick = (planName: string) => {
-//     setSelectedPlan({ name: planName, price: '' });
-//     setIsSponsorOpen(true);
-//   };
+  const handleSponsorClick = (planName: string) => {
+    setSelectedPlan({ name: planName, price: '' });
+    setIsSponsorOpen(true);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -47,12 +47,12 @@ const HomeDark = () => {
       <div id="chat">
         <ChatSectionDark onTrialsExhausted={() => setIsWaitlistOpen(true)} />
       </div>
-      {/* <PricingSection 
+      <PricingSection 
         variant="dark" 
         onPayClick={handleWaitlistClick}
         onSponsorClick={handleSponsorClick}
       />
-      <CTASectionDark onSecureSpotClick={() => setIsWaitlistOpen(true)} />
+      {/* <CTASectionDark onSecureSpotClick={() => setIsWaitlistOpen(true)} />
       <FooterDark /> */}
 
       <WaitlistModal 
