@@ -50,7 +50,7 @@ const CountdownTimer = ({ targetDate, variant = 'dark' }: CountdownTimerProps) =
   if (variant === 'light') {
     return (
       <div className="flex gap-2">
-        {timeUnits.map((unit, index) => (
+        {timeUnits.map((unit) => (
           <div
             key={unit.label}
             className={`flex flex-col items-center justify-center w-14 h-16 md:w-16 md:h-20 rounded-lg ${
@@ -73,7 +73,7 @@ const CountdownTimer = ({ targetDate, variant = 'dark' }: CountdownTimerProps) =
 
   return (
     <div className="flex gap-2">
-      {timeUnits.map((unit, index) => (
+      {timeUnits.map((unit) => (
         <div
           key={unit.label}
           className={`flex flex-col items-center justify-center w-14 h-16 md:w-16 md:h-20 rounded-lg transition-all duration-300 ${
