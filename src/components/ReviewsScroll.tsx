@@ -1,5 +1,5 @@
-import { useRef, useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { useRef, useState } from 'react';
+// import { motion } from 'framer-motion';
 import ReviewCard from './ReviewCard';
 import avatarChidi from '@/assets/avatar-chidi.jpg';
 import avatarAisha from '@/assets/avatar-aisha.jpg';
