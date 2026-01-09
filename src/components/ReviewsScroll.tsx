@@ -6,7 +6,6 @@ import avatarAisha from '../assets/aishat.jpg';
 import avatarSamuel from '../assets/samuel.jpg';
 import avatarBlessing from '../assets/blessing.jpg';
 import avatarEmeka from '../assets/avatar-male.png';
-import avatarFatima from '../assets/fatima.jpg';
 
 interface ReviewsScrollProps {
   variant?: 'dark' | 'light';
