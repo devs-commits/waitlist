@@ -32,7 +32,7 @@ const CTASectionDark = ({ onSecureSpotClick }: CTASectionDarkProps) => {
             className="text-center lg:text-left"
           >
             <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
-              Don't be left behind in 2025.
+              Don't be left behind in 2026.
             </h2>
             <p className="text-sm text-muted-foreground mb-6">
               Can't afford the subscription? Don't let that stop you. Send a sponsorship link to a mentor.

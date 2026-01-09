@@ -41,7 +41,7 @@ const PricingCard = ({
       transition={{ duration: 0.5, delay }}
     >
       {isFeatured && (
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 my-4">
           <span className="bg-teal text-primary-foreground text-xs font-semibold px-4 py-1 rounded-full">
             BEST VALUE
           </span>
