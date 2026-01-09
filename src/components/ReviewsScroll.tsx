@@ -1,12 +1,12 @@
 import { useRef, useState } from 'react';
 // import { motion } from 'framer-motion';
 import ReviewCard from './ReviewCard';
-import avatarChidi from '@/assets/avatar-chidi.jpg';
-import avatarAisha from '@/assets/avatar-aisha.jpg';
-import avatarSamuel from '@/assets/avatar-samuel.jpg';
-import avatarBlessing from '@/assets/avatar-blessing.jpg';
-import avatarEmeka from '@/assets/avatar-emeka.jpg';
-import avatarFatima from '@/assets/avatar-fatima.jpg';
+import avatarChidi from '../assets/chidi.jpg';
+import avatarAisha from '../assets/aishat.jpg';
+import avatarSamuel from '../assets/samuel.jpg';
+import avatarBlessing from '../assets/blessing.jpg';
+import avatarEmeka from '../assets/avatar-male.png';
+import avatarFatima from '../assets/fatima.jpg';
 
 interface ReviewsScrollProps {
   variant?: 'dark' | 'light';
