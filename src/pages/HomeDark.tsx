@@ -5,7 +5,7 @@ import ArsenalSection from '../components/ArsenalSection';
 import ChatSectionDark from '../components/ChatSectionDark';
 import PricingSection from '../components/PricingSection';
 import CTASectionDark from '../components/CTASectionDark';
-// import FooterDark from '@/components/FooterDark';
+import FooterDark from '../components/FooterDark';
 import WaitlistModal from '../components/WaitlistModal';
 import SponsorModal from '../components/SponsorModal';
 import SuccessModal from '../components/SuccessModal';
@@ -53,7 +53,7 @@ const HomeDark = () => {
         onSponsorClick={handleSponsorClick}
       />
       <CTASectionDark onSecureSpotClick={() => setIsWaitlistOpen(true)} />
-      {/* <FooterDark /> */}
+      <FooterDark />
 
       <WaitlistModal 
         isOpen={isWaitlistOpen} 
