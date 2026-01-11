@@ -17,7 +17,7 @@ const FooterDark = ({ locations = ['Lagos', 'Nairobi', 'Remote'] }: FooterDarkPr
               WDC<span className="font-normal text-muted-foreground">Labs</span>
             </span>
           </a> */}
-          <div className="max-w-7xl justify-left md:ml-20 sm:ml-5">
+          <div className="max-w-7xl justify-left md:ml-20">
               <a href="/" className="flex items-left">
                 <img src={wdcLogo} alt="WDC Labs" className="h-[50px] w-[120px] sm:h-[55px] sm:w-[200px]" />
               </a>
