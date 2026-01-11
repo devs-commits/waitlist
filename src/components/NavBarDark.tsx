@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Button } from '../components/ui/button';
+import wdcLogo from '../assets/wdc-logo.jpg';
 
 interface NavbarDarkProps {
   onChatClick?: () => void;
@@ -21,7 +22,7 @@ const NavbarDark = ({ onChatClick, onJoinWaitlistClick }: NavbarDarkProps) => {
     <nav className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-lg">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
+          {/* Logo
           <a href="/" className="flex items-center gap-2">
             <div className="flex items-center justify-center w-8 h-8 rounded bg-teal">
               <span className="text-primary-foreground font-bold text-sm">W</span>
@@ -29,7 +30,12 @@ const NavbarDark = ({ onChatClick, onJoinWaitlistClick }: NavbarDarkProps) => {
             <span className="font-bold text-lg text-foreground">
               WDC<span className="font-normal text-muted-foreground">Labs</span>
             </span>
-          </a>
+          </a> */}
+          <div className="max-w-7xl ml-[100px]">
+              <a href="/" className="inline-block">
+                <img src={wdcLogo} alt="WDC Labs" className="h-[50px] w-[120px] sm:h-[55px] sm:w-[200px]" />
+              </a>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
