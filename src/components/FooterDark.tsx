@@ -8,15 +8,6 @@ const FooterDark = ({ locations = ['Lagos', 'Nairobi', 'Remote'] }: FooterDarkPr
     <footer className="bg-background border-t border-border py-8">
       <div className="mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
-          {/* Logo
-          <a href="/" className="flex items-center gap-2">
-            <div className="flex items-center justify-center w-8 h-8 rounded bg-teal">
-              <span className="text-primary-foreground font-bold text-sm">W</span>
-            </div>
-            <span className="font-bold text-lg text-foreground">
-              WDC<span className="font-normal text-muted-foreground">Labs</span>
-            </span>
-          </a> */}
           <div className="max-w-7xl justify-left md:ml-20">
               <a href="/" className="flex items-left">
                 <img src={wdcLogo} alt="WDC Labs" className="h-[50px] w-[120px] sm:h-[55px] sm:w-[200px]" />
