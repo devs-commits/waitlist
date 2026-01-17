@@ -31,14 +31,18 @@ const ChatInterface = ({ variant = 'dark', onTrialsExhausted }: ChatInterfacePro
   const [isTyping, setIsTyping] = useState(false);
   const [turnsLeft, setTurnsLeft] = useState(3);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    // Scroll within the chat container only, not the entire page
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+    }
   };
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  }, [messages, isTyping]);
 
   const handleSendMessage = async () => {
     if (!inputValue.trim() || turnsLeft <= 0) return;
@@ -124,7 +128,7 @@ const ChatInterface = ({ variant = 'dark', onTrialsExhausted }: ChatInterfacePro
       </div>
 
       {/* Messages */}
-      <div className="h-64 overflow-y-auto p-4 space-y-4">
+      <div ref={messagesContainerRef} className="h-64 overflow-y-auto p-4 space-y-4">
         <AnimatePresence>
           {messages.map((message) => (
             <motion.div
