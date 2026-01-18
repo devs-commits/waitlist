@@ -47,7 +47,7 @@ const plans = [
 
 const PricingSection = ({ variant = 'light', onPayClick, onSponsorClick, showRefundBadge = true }: PricingSectionProps) => {
   return (
-    <section className={`py-16 md:py-24 ${variant === 'dark' ? 'section-dark' : 'bg-secondary'}`} id="pricing">
+    <section className={`py-16 md:py-24 ${variant === 'dark' ? 'section-dark' : 'bg-[hsla(207,36%,95%,1)]'}`} id="pricing">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"
@@ -55,7 +55,7 @@ const PricingSection = ({ variant = 'light', onPayClick, onSponsorClick, showRef
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-secondary mb-4">
             Invest in Your Future.{' '}
             <span className="text-coral">Or Get Someone Else To.</span>
           </h2>

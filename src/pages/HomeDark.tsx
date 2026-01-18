@@ -51,7 +51,7 @@ const HomeDark = () => {
       </div>
       <HallOfFailures />
       <PricingSection 
-        variant="dark" 
+        variant="light" 
         onPayClick={handleWaitlistClick}
         onSponsorClick={handleSponsorClick}
       />
