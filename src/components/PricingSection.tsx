@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
 import PricingCard from './PricingCard';
+import DiasporaShield from './DiasporaShield';
 
 interface PricingSectionProps {
   variant?: 'dark' | 'light';
   onPayClick?: (plan: string) => void;
   onSponsorClick?: (plan: string) => void;
+  showRefundBadge?: boolean;
 }
 
 const plans = [
@@ -43,9 +45,9 @@ const plans = [
   },
 ];
 
-const PricingSection = ({ variant = 'dark', onPayClick, onSponsorClick }: PricingSectionProps) => {
+const PricingSection = ({ variant = 'light', onPayClick, onSponsorClick, showRefundBadge = true }: PricingSectionProps) => {
   return (
-    <section className={`py-16 md:py-24 ${variant === 'dark' ? 'section-dark' : 'bg-background'}`} id="pricing">
+    <section className={`py-16 md:py-24 ${variant === 'dark' ? 'section-dark' : 'bg-secondary'}`} id="pricing">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"
@@ -55,16 +57,14 @@ const PricingSection = ({ variant = 'dark', onPayClick, onSponsorClick }: Pricin
         >
           <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
             Invest in Your Future.{' '}
-            <span className={variant === 'dark' ? 'text-gradient-teal' : 'text-coral'}>
-              Or Get Someone Else To.
-            </span>
+            <span className="text-coral">Or Get Someone Else To.</span>
           </h2>
           <p className="text-sm text-muted-foreground max-w-md mx-auto">
             Can't afford the subscription? Don't let that stop you. Send a sponsorship link to a mentor.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
           {plans.map((plan, index) => (
             <PricingCard
               key={plan.name}
@@ -73,9 +73,13 @@ const PricingSection = ({ variant = 'dark', onPayClick, onSponsorClick }: Pricin
               delay={index * 0.1}
               onPayYourselfClick={() => onPayClick?.(plan.name)}
               onAskSponsorClick={() => onSponsorClick?.(plan.name)}
+              showRefundBadge={showRefundBadge}
             />
           ))}
         </div>
+
+        {/* Diaspora Shield - Payment Logos */}
+        <DiasporaShield />
       </div>
     </section>
   );
