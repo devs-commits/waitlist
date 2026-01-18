@@ -78,7 +78,7 @@ const CountdownTimer = ({ targetDate, variant = 'dark' }: CountdownTimerProps) =
           key={unit.label}
           className={`flex flex-col items-center justify-center w-14 h-16 md:w-16 md:h-20 rounded-lg transition-all duration-300 ${
             unit.isAccent 
-              ? 'countdown-box-accent pulse-glow text-primary-foreground' 
+              ? 'countdown-box pulse-glow text-red-500' 
               : 'countdown-box text-foreground'
           }`}
         >
