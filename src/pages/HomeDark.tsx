@@ -10,6 +10,7 @@ import WaitlistModal from '../components/WaitlistModal';
 import SponsorModal from '../components/SponsorModal';
 import SuccessModal from '../components/SuccessModal';
 import FreeTasteTest from '../components/FreeTasteTest';
+import HallOfFailures from '../components/HallOfFailures';
 
 const HomeDark = () => {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
@@ -48,6 +49,7 @@ const HomeDark = () => {
       <div id="chat">
         <ChatSectionDark onTrialsExhausted={() => setIsWaitlistOpen(true)} />
       </div>
+      <HallOfFailures />
       <PricingSection 
         variant="dark" 
         onPayClick={handleWaitlistClick}
