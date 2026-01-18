@@ -4,7 +4,7 @@ import { X, Mail, User, Copy, Check } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { useToast } from '../hooks/use-toast';
-import { Textarea } from './ui/Textarea';
+import { Textarea } from './ui/textarea';
 
 interface SponsorModalProps {
   isOpen: boolean;
@@ -157,7 +157,7 @@ const SponsorModal = ({ isOpen, onClose, planName = 'The Career Accelerator', va
                     <Textarea
                       placeholder="Personal message (optional)"
                       value={formData.message}
-                      onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setFormData({ ...formData, message: e.target.value })}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="bg-secondary border-border resize-none"
                       rows={3}
                     />

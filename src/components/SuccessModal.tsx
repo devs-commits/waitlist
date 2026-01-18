@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Mail, User, Copy, Check } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
-import { Textarea } from './ui/Textarea';
+import { Textarea } from './ui/textarea';
 import { useToast } from '../hooks/use-toast';
 
 interface SponsorModalProps {
