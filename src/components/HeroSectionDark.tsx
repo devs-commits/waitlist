@@ -30,12 +30,12 @@ const HeroSectionDark = ({ onSecureSpotClick, onMentorPayClick }: HeroSectionDar
           </motion.h1>
 
           <motion.p 
-            className="text-sm md:text-base text-muted-foreground max-w-xl mx-auto mb-8"
+            className="text-sm md:text-base text-black max-w-xl mx-auto mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            By 2026, "Entry Level" jobs will require 2 years of experience. <span className="font-bold text-black font-medium">WDC Labs</span> gives you that experience in 3 months. Don't gamble with your career. Get the cheat code.
+            By 2026, "Entry Level" jobs will require 2 years of experience. <span className="font-bold text-black">WDC Labs</span> gives you that experience in 3 months. Don't gamble with your career. Get the cheat code.
           </motion.p>
 
           <motion.div
