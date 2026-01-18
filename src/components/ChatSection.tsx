@@ -7,7 +7,7 @@ interface ChatSectionProps {
   onTrialsExhausted?: () => void;
 }
 
-const ChatSectionV3 = ({ onTrialsExhausted }: ChatSectionProps) => {
+const ChatSection = ({ onTrialsExhausted }: ChatSectionProps) => {
   return (
     <section className="py-16 md:py-24 bg-secondary" id="chat-with-tolu">
       <div className="container mx-auto px-4">

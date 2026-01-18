@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { CreditCard, Shield, Globe } from 'lucide-react';
+import { Shield, Globe } from 'lucide-react';
 
 const DiasporaShield = () => {
   return (

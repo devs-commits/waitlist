@@ -2,7 +2,7 @@ import { useState } from 'react';
 import NavbarDark from '../components/NavBarDark';
 import HeroSectionDark from '../components/HeroSectionDark';
 import ArsenalSection from '../components/ArsenalSection';
-import ChatSectionDark from '../components/ChatSectionDark';
+import ChatSectionDark from '../components/ChatSection';
 import PricingSection from '../components/PricingSection';
 import CTASectionDark from '../components/CTASectionDark';
 import FooterDark from '../components/FooterDark';
