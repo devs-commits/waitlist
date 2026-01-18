@@ -157,7 +157,7 @@ const SponsorModal = ({ isOpen, onClose, planName = 'The Career Accelerator', va
                     <Textarea
                       placeholder="Personal message (optional)"
                       value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setFormData({ ...formData, message: e.target.value })}
                       className="bg-secondary border-border resize-none"
                       rows={3}
                     />
