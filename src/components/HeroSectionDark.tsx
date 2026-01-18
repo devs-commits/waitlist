@@ -77,7 +77,7 @@ const HeroSectionDark = ({ onSecureSpotClick, onMentorPayClick }: HeroSectionDar
           </motion.div>
 
           <motion.p 
-            className="text-xs text-muted-foreground"
+            className="text-xs text-black"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
