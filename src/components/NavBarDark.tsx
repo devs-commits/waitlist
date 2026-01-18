@@ -19,7 +19,7 @@ const NavbarDark = ({ onChatClick, onJoinWaitlistClick }: NavbarDarkProps) => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-lg">
+    <nav className="sticky top-0 z-50 w-full border-b border-border/50 bg-background backdrop-blur-lg">
       <div className="mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo
