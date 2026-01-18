@@ -1,15 +1,15 @@
 import { motion } from 'framer-motion';
 import ChatInterface from './ChatInterface';
 import ReviewsScroll from './ReviewsScroll';
+import { Sparkles } from 'lucide-react';
 
-interface ChatSectionDarkProps {
-  onChatStart?: () => void;
+interface ChatSectionProps {
   onTrialsExhausted?: () => void;
 }
 
-const ChatSectionDark = ({ onTrialsExhausted }: ChatSectionDarkProps) => {
+const ChatSectionV3 = ({ onTrialsExhausted }: ChatSectionProps) => {
   return (
-    <section className="section-darker py-16 md:py-24">
+    <section className="py-16 md:py-24 bg-secondary" id="chat-with-tolu">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"
@@ -17,8 +17,14 @@ const ChatSectionDark = ({ onTrialsExhausted }: ChatSectionDarkProps) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
+          {/* Free Badge */}
+          <div className="inline-flex items-center gap-2 bg-teal/10 text-teal px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <Sparkles className="w-4 h-4" />
+            FREE TASTE TEST - No Payment Required
+          </div>
+          
           <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
-            Meet Tolu. <span className="text-gradient-coral">Your Nightmare.</span>
+            Meet Tolu. <span className="text-coral">Your Nightmare.</span>
           </h2>
           <p className="text-sm text-muted-foreground max-w-xl mx-auto">
             Tolu is our AI HR Manager. She doesn't care about your "passion". She cares about output. You have exactly{' '}
@@ -27,24 +33,24 @@ const ChatSectionDark = ({ onTrialsExhausted }: ChatSectionDarkProps) => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-          {/* Chat Interface - Left on desktop */}
+          {/* Reviews - Left on desktop */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="order-2 lg:order-1"
           >
-            <ChatInterface variant="dark" onTrialsExhausted={onTrialsExhausted} />
+            <ReviewsScroll variant="light" />
           </motion.div>
 
-          {/* Reviews - Right on desktop */}
+          {/* Chat Interface - Right on desktop */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="order-1 lg:order-2"
           >
-            <ReviewsScroll variant="dark" />
+            <ChatInterface variant="light" onTrialsExhausted={onTrialsExhausted} />
           </motion.div>
         </div>
       </div>
@@ -52,4 +58,4 @@ const ChatSectionDark = ({ onTrialsExhausted }: ChatSectionDarkProps) => {
   );
 };
 
-export default ChatSectionDark;
+export default ChatSection;

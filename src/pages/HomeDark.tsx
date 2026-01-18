@@ -9,6 +9,7 @@ import FooterDark from '../components/FooterDark';
 import WaitlistModal from '../components/WaitlistModal';
 import SponsorModal from '../components/SponsorModal';
 import SuccessModal from '../components/SuccessModal';
+import FreeTasteTest from '../components/FreeTasteTest';
 
 const HomeDark = () => {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
@@ -43,7 +44,7 @@ const HomeDark = () => {
         onMentorPayClick={() => setIsSponsorOpen(true)}
       />
       <ArsenalSection variant="light" />
-
+      <FreeTasteTest />
       <div id="chat">
         <ChatSectionDark onTrialsExhausted={() => setIsWaitlistOpen(true)} />
       </div>
