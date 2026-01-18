@@ -14,7 +14,7 @@ const HeroSectionDark = ({ onSecureSpotClick, onMentorPayClick }: HeroSectionDar
 
   return (
     <section className="bg-foreground min-h-[90vh] flex flex-col">
-      <WarningBanner />
+      <WarningBanner/>
       
       <div className="flex-1 flex items-center justify-center px-4 py-12">
         <div className="max-w-3xl mx-auto text-center text-black-500">
