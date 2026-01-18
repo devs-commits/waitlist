@@ -3,7 +3,7 @@ import { Sparkles, MessageCircle, FileCheck, Zap } from 'lucide-react';
 
 const FreeTasteTest = () => {
   return (
-    <section className="py-12 bg-gradient-to-r from-teal/5 via-transparent to-coral/5">
+    <section className="py-12 bg-[hsla(207,36%,95%,1)]">
       <div className="container mx-auto px-4">
         <motion.div
           className="max-w-4xl mx-auto bg-card border border-border rounded-2xl p-8 md:p-10 relative overflow-hidden"
