@@ -9,7 +9,7 @@ interface ChatSectionProps {
 
 const ChatSection = ({ onTrialsExhausted }: ChatSectionProps) => {
   return (
-    <section className="py-16 md:py-24 bg-secondary" id="chat-with-tolu">
+    <section className="py-16 md:py-24 bg-[hsla(207,36%,95%,1)]" id="chat-with-tolu">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"
@@ -23,7 +23,7 @@ const ChatSection = ({ onTrialsExhausted }: ChatSectionProps) => {
             FREE TASTE TEST - No Payment Required
           </div>
           
-          <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-secondary mb-4">
             Meet Tolu. <span className="text-coral">Your Nightmare.</span>
           </h2>
           <p className="text-sm text-muted-foreground max-w-xl mx-auto">

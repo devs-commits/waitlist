@@ -43,7 +43,7 @@ const failures: FailureExample[] = [
 
 const HallOfFailures = () => {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-secondary to-background">
+    <section className="py-16 md:py-24 bg-[hsla(207,36%,95%,1)]">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"
@@ -55,7 +55,7 @@ const HallOfFailures = () => {
             <AlertTriangle className="w-4 h-4" />
             HALL OF FAILURES
           </div>
-          <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-secondary mb-4">
             Our AI Supervisors <span className="text-coral">Don't Sugarcoat</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
