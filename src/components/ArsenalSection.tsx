@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 import FeatureCardDark from './FeatureCardDark';
-// import FeatureCardLight from './FeatureCardLight';
+import FeatureCardLight from './FeatureCardLight';
 import { Building2, FileText, Briefcase, Users } from 'lucide-react';
-
 import virtualOffice from '../assets/virtual-office.png';
 import recommendationLetter from '../assets/recommendation-letter.png';
 import livePortfolio from '../assets/live-portfolio.jpg';
@@ -46,7 +45,7 @@ const ArsenalSection = ({ variant = 'dark' }: ArsenalSectionProps) => {
 
   if (variant === 'light') {
     return (
-      <section className="py-16 md:py-24 bg-secondary" id="arsenal">
+      <section className="py-16 md:py-24 bg-[hsla(207,36%,95%,1)]" id="arsenal">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-12"
@@ -54,29 +53,30 @@ const ArsenalSection = ({ variant = 'dark' }: ArsenalSectionProps) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-secondary mb-4">
               The ₦15k Arsenal
             </h2>
-            <p className="text-sm text-muted-foreground max-w-xl mx-auto">
+            <p className="text-sm text-secondary max-w-xl mx-auto">
               Most courses give you videos. We give you assets that get you hired. This is what your subscription actually buys.
             </p>
           </motion.div>
 
-          {/* <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-            //   <FeatureCardLight
-            //     key={feature.title}
-            //     image={feature.image}
-            //     title={feature.title}
-            //     description={feature.description}
-            //     delay={index * 0.1}
-            //   />
+              <FeatureCardLight
+                key={feature.title}
+                image={feature.image}
+                title={feature.title}
+                description={feature.description}
+                delay={index * 0.1}
+              />
             ))}
-          </div> */}
+          </div>
         </div>
       </section>
     );
   }
+
 
   return (
     <section className="section-dark py-16 md:py-24" id="arsenal">

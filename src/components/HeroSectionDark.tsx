@@ -13,7 +13,7 @@ const HeroSectionDark = ({ onSecureSpotClick, onMentorPayClick }: HeroSectionDar
   const targetDate = new Date('2026-01-30T00:00:00');
 
   return (
-    <section className="bg-foreground min-h-[90vh] flex flex-col">
+    <section className="bg-[hsla(207,36%,95%,1)] min-h-[90vh] flex flex-col">
       <WarningBanner/>
       
       <div className="flex-1 flex items-center justify-center px-4 py-12">

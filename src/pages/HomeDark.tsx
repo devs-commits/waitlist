@@ -42,7 +42,7 @@ const HomeDark = () => {
         onSecureSpotClick={() => setIsWaitlistOpen(true)}
         onMentorPayClick={() => setIsSponsorOpen(true)}
       />
-      <ArsenalSection variant="dark" />
+      <ArsenalSection variant="light" />
 
       <div id="chat">
         <ChatSectionDark onTrialsExhausted={() => setIsWaitlistOpen(true)} />
