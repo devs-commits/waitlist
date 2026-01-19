@@ -53,10 +53,10 @@ const ArsenalSection = ({ variant = 'dark' }: ArsenalSectionProps) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-4xl font-bold text-secondary mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-black mb-4">
               The ₦15k Arsenal
             </h2>
-            <p className="text-sm text-secondary max-w-xl mx-auto">
+            <p className="text-sm text-black max-w-xl mx-auto">
               Most courses give you videos. We give you assets that get you hired. This is what your subscription actually buys.
             </p>
           </motion.div>
