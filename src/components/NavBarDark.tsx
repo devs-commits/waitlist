@@ -24,7 +24,7 @@ const NavbarDark = ({ onChatClick, onJoinWaitlistClick }: NavbarDarkProps) => {
         <div className="flex h-16 items-center justify-between">
           <div className="max-w-7xl justify-left md:ml-20 sm:ml-5">
               <a href="/" className="flex items-left">
-                <img src={wdcLogo} alt="WDC Labs" className="h-[50px] w-[120px] sm:h-[55px] sm:w-[200px]" />
+                <img src={wdcLogo} alt="WDC Labs" className="h-[50px] w-[120px] sm:h-[55px] sm:w-[180px]" />
               </a>
           </div>
 
