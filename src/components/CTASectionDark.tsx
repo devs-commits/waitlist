@@ -8,7 +8,7 @@ interface CTASectionDarkProps {
 
 const CTASectionDark = ({ onSecureSpotClick }: CTASectionDarkProps) => {
   return (
-    <section className="section-darker py-16 md:py-24">
+    <section className="bg-[hsla(207,36%,95%,1)] py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Image */}

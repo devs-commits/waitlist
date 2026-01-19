@@ -35,7 +35,7 @@ const HomeDark = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen light-theme">
       <NavbarDark 
         onJoinWaitlistClick={() => setIsWaitlistOpen(true)}
         onChatClick={() => document.getElementById('chat')?.scrollIntoView({ behavior: 'smooth' })}
@@ -62,18 +62,18 @@ const HomeDark = () => {
         isOpen={isWaitlistOpen} 
         onClose={() => setIsWaitlistOpen(false)} 
         onSuccess={handleWaitlistSuccess}
-        variant="dark" 
+        variant="light" 
       />
       <SponsorModal 
         isOpen={isSponsorOpen} 
         onClose={() => setIsSponsorOpen(false)} 
         planName={selectedPlan.name || 'The Career Accelerator'} 
-        variant="dark" 
+        variant="light" 
       />
       <SuccessModal
         isOpen={isSuccessOpen}
         onClose={() => setIsSuccessOpen(false)}
-        variant="dark"
+        variant="light"
       />
     </div>
   );

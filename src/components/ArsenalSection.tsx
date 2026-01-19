@@ -79,7 +79,7 @@ const ArsenalSection = ({ variant = 'dark' }: ArsenalSectionProps) => {
 
 
   return (
-    <section className="section-dark py-16 md:py-24" id="arsenal">
+    <section className="bg-[hsla(207,36%,95%,1)] py-16 md:py-24" id="arsenal">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"

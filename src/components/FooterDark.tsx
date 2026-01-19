@@ -5,7 +5,7 @@ interface FooterDarkProps {
 
 const FooterDark = ({ locations = ['Lagos', 'Nairobi', 'Remote'] }: FooterDarkProps) => {
   return (
-    <footer className="bg-background border-t border-border py-8">
+    <footer className="bg-[hsla(207,36%,95%,1)] border-t border-border py-8">
       <div className="mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="max-w-7xl justify-left md:ml-20">

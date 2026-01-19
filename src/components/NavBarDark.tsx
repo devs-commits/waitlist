@@ -19,18 +19,9 @@ const NavbarDark = ({ onChatClick, onJoinWaitlistClick }: NavbarDarkProps) => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-border/50 bg-background backdrop-blur-lg">
+    <nav className="sticky top-0 z-50 w-full border-b border-border bg-[hsla(207,36%,95%,1)]">
       <div className="mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo
-          <a href="/" className="flex items-center gap-2">
-            <div className="flex items-center justify-center w-8 h-8 rounded bg-teal">
-              <span className="text-primary-foreground font-bold text-sm">W</span>
-            </div>
-            <span className="font-bold text-lg text-foreground">
-              WDC<span className="font-normal text-muted-foreground">Labs</span>
-            </span>
-          </a> */}
           <div className="max-w-7xl justify-left md:ml-20 sm:ml-5">
               <a href="/" className="flex items-left">
                 <img src={wdcLogo} alt="WDC Labs" className="h-[50px] w-[120px] sm:h-[55px] sm:w-[200px]" />
