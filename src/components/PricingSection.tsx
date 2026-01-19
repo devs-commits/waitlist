@@ -55,7 +55,7 @@ const PricingSection = ({ variant = 'light', onPayClick, onSponsorClick, showRef
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl md:text-4xl font-bold text-secondary mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-black mb-4">
             Invest in Your Future.{' '}
             <span className="text-coral">Or Get Someone Else To.</span>
           </h2>

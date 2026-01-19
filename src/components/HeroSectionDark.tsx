@@ -48,7 +48,7 @@ const HeroSectionDark = ({ onSecureSpotClick, onMentorPayClick }: HeroSectionDar
               LAUNCH DEADLINE: JAN 30, 2026
             </p>
             <div className="flex justify-center">
-              <CountdownTimer targetDate={targetDate} variant="dark" />
+              <CountdownTimer targetDate={targetDate} variant="light" />
             </div>
           </motion.div>
 

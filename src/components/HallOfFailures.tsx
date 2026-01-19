@@ -55,7 +55,7 @@ const HallOfFailures = () => {
             <AlertTriangle className="w-4 h-4" />
             HALL OF FAILURES
           </div>
-          <h2 className="text-2xl md:text-4xl font-bold text-secondary mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-black mb-4">
             Our AI Supervisors <span className="text-coral">Don't Sugarcoat</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
