@@ -60,7 +60,7 @@ const HeroSectionDark = ({ onSecureSpotClick, onMentorPayClick }: HeroSectionDar
             <Button 
               onClick={onSecureSpotClick}
               variant="ghost"
-              className="text-foreground px-8 py-6 text-base font-semibold"
+              className="text-white px-8 py-6 text-base font-semibold"
             >
               <Lock className="w-4 h-4 mr-2" />
               SECURE MY SPOT
