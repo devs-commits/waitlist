@@ -23,7 +23,7 @@ const ChatSection = ({ onTrialsExhausted }: ChatSectionProps) => {
             FREE TASTE TEST - No Payment Required
           </div>
           
-          <h2 className="text-2xl md:text-4xl font-bold text-secondary mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-black mb-4">
             Meet Tolu. <span className="text-coral">Your Nightmare.</span>
           </h2>
           <p className="text-sm text-muted-foreground max-w-xl mx-auto">
