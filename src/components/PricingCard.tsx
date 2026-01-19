@@ -29,7 +29,6 @@ const PricingCard = ({
   onAskSponsorClick,
   showRefundBadge = false,
 }: PricingCardProps) => {
-  // Featured card gets dark navy background, others get white/light background
   const cardBgClass = isFeatured 
     ? 'bg-[#1a2744] text-white' 
     : 'bg-white text-[#1a2744] shadow-lg';
