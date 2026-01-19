@@ -187,7 +187,8 @@
   }
 
   .pricing-card-featured-light {
-    border: 2px solid hsl(16, 100%, 60%);
+    border: 2px solid;
+    background: hsla(205, 98%, 16%, 1);
   }
 
   .chat-interface {
