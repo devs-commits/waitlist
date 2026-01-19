@@ -35,7 +35,7 @@ const HomeDark = () => {
   };
 
   return (
-    <div className="min-h-screen light-theme">
+    <div className="min-h-screen light-theme bg-[hsla(207,36%,95%,1)]">
       <NavbarDark 
         onJoinWaitlistClick={() => setIsWaitlistOpen(true)}
         onChatClick={() => document.getElementById('chat')?.scrollIntoView({ behavior: 'smooth' })}
