@@ -24,7 +24,6 @@ const PricingCard = ({
   period, 
   features, 
   isFeatured = false,
-  variant = 'dark',
   delay = 0,
   onPayYourselfClick,
   onAskSponsorClick,
