@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
-import { Building, Award, ExternalLink } from 'lucide-react';
+import { Building, ExternalLink } from 'lucide-react';
+import actdLogo from '../assets/actd-logo.png';
+import wdcLogo from '../assets/wdc-logo.jpg';
 
 const PhysicalAnchor = () => {
   return (
@@ -33,10 +35,8 @@ const PhysicalAnchor = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary/20 to-coral/20 flex items-center justify-center">
-              <div className="flex items-center justify-center w-12 h-12 rounded bg-primary">
-                <span className="text-primary-foreground font-bold text-xl">W</span>
-              </div>
+            <div className="w-32 h-16 mx-auto mb-6 flex items-center justify-center">
+              <img src={wdcLogo} alt="Wild Fusion Digital Centre" className="h-full w-auto object-contain" />
             </div>
             <h3 className="text-xl font-bold text-foreground mb-2">Wild Fusion Digital Centre</h3>
             <p className="text-sm text-muted-foreground mb-4">
@@ -55,21 +55,23 @@ const PhysicalAnchor = () => {
 
           {/* ACTD Accreditation */}
           <motion.div
-            className="bg-card border border-border rounded-2xl p-8 text-center hover:border-teal/50 transition-all duration-300"
+            className="bg-[#003366] border border-[#003366] rounded-2xl p-8 text-center hover:border-[#c5a54e]/50 transition-all duration-300"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-teal/20 to-yellow/20 flex items-center justify-center">
-              <Award className="w-12 h-12 text-teal" />
+            <div className="w-24 h-24 mx-auto mb-6 flex items-center justify-center">
+              <img src={actdLogo} alt="ACTD Accreditation" className="w-full h-full object-contain" />
             </div>
-            <h3 className="text-xl font-bold text-foreground mb-2">ACTD Accredited</h3>
-            <p className="text-sm text-muted-foreground mb-4">
-              Accredited by the Abuja Chamber of Training & Development. Your certificate carries weight with Nigerian employers.
+            <h3 className="text-xl font-bold text-white mb-2">ACTD Accredited</h3>
+            <p className="text-sm text-white/70 mb-4">
+              Accredited by the American Council of Training and Development. Your certificate is internationally recognized.
             </p>
             <a
-              href="#actd"
-              className="inline-flex items-center gap-2 text-teal hover:text-teal/80 text-sm font-semibold transition-colors"
+              href="https://www.actd.us"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-[#c5a54e] hover:text-[#c5a54e]/80 text-sm font-semibold transition-colors"
             >
               Verify Accreditation
               <ExternalLink className="w-4 h-4" />
@@ -85,21 +87,33 @@ const PhysicalAnchor = () => {
           viewport={{ once: true }}
         >
           <div className="text-center">
-            <p className="text-3xl font-bold text-foreground">500+</p>
-            <p className="text-sm text-muted-foreground">Graduates</p>
+            <p className="text-3xl font-bold text-foreground">4,000+</p>
+            <p className="text-sm text-muted-foreground">Certified Graduates</p>
           </div>
           <div className="text-center">
-            <p className="text-3xl font-bold text-foreground">3</p>
-            <p className="text-sm text-muted-foreground">Physical Campuses</p>
+            <p className="text-3xl font-bold text-foreground">Lagos</p>
+            <p className="text-sm text-muted-foreground">Ikoyi Campus</p>
           </div>
           <div className="text-center">
-            <p className="text-3xl font-bold text-foreground">15+</p>
-            <p className="text-sm text-muted-foreground">Industry Partners</p>
+            <p className="text-3xl font-bold text-foreground">10+</p>
+            <p className="text-sm text-muted-foreground">Years Experience</p>
           </div>
           <div className="text-center">
-            <p className="text-3xl font-bold text-foreground">92%</p>
-            <p className="text-sm text-muted-foreground">Employment Rate</p>
+            <p className="text-3xl font-bold text-foreground">50+</p>
+            <p className="text-sm text-muted-foreground">Corporate Partners</p>
           </div>
+        </motion.div>
+
+        {/* Location Details */}
+        <motion.div
+          className="mt-8 text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          <p className="text-sm text-muted-foreground">
+            📍 276B Corporation Drive, Dolphin Estate, Ikoyi, Lagos, Nigeria
+          </p>
         </motion.div>
       </div>
     </section>
