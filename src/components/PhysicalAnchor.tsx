@@ -23,7 +23,7 @@ const PhysicalAnchor = () => {
           </h2>
 
           <p className="text-muted-foreground mb-10 max-w-2xl mx-auto">
-            WDC Labs isn't just another online program. We're backed by Wild Fusion Digital Centre—a recognized training institution with physical presence and ACTD accreditation.
+            WDC Labs isn't just another online program. We're backed by Wild Fusion Digital Centre. A recognized training institution with physical presence and ACTD accreditation.
           </p>
         </motion.div>
 
@@ -43,7 +43,7 @@ const PhysicalAnchor = () => {
               Nigeria's premier digital skills training institution. Physical campuses. Real instructors. Industry partnerships.
             </p>
             <a
-              href="https://wildfusion.io"
+              href="https://wdc.ng"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-primary hover:text-primary/80 text-sm font-semibold transition-colors"
