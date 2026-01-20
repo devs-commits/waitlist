@@ -43,7 +43,7 @@ const failures: FailureExample[] = [
 
 const HallOfFailures = () => {
   return (
-    <section className="py-16 md:py-24 bg-[hsla(207,36%,95%,1)]">
+    <section className="py-4 md:py-6 bg-[hsla(207,36%,95%,1)]">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"
