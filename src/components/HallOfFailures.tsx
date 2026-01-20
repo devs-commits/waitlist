@@ -59,7 +59,7 @@ const HallOfFailures = () => {
             Our AI Supervisors <span className="text-coral">Don't Sugarcoat</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Real examples of rejected work. Our AI supervisors hold you to industry standards—because real employers will too.
+            Real examples of rejected work. Our AI supervisors hold you to industry standards because real employers will too.
           </p>
         </motion.div>
 
