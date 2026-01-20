@@ -8,7 +8,7 @@ interface WarningBannerProps {
 const WarningBanner = ({ spotsLeft = 124, batch = "JAN BATCH" }: WarningBannerProps) => {
   return (
     <motion.div 
-      className="warning-banner py-2 px-6 text-center justify-center mx-auto mt-5 border rounded-2xl border-red-500"
+      className="warning-banner py-2 px-6 text-center justify-center mx-auto mt-12 border rounded-2xl border-red-500"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
