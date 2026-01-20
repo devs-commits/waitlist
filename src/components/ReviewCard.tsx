@@ -13,7 +13,7 @@ const ReviewCard = ({ name, location, content, avatar, variant = 'dark' }: Revie
     : 'bg-card border border-border rounded-xl p-4 shadow-sm';
 
   return (
-    <div className={`${cardClass} mb-4`}>
+    <div className={`${cardClass} mb-4 max-w-md`}>
       <div className="flex items-center gap-3 mb-3">
         {avatar ? (
           <img src={avatar} alt={name} className="w-10 h-10 rounded-full object-cover" />

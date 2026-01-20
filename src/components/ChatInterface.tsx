@@ -104,7 +104,7 @@ const ChatInterface = ({ variant = 'dark', onTrialsExhausted }: ChatInterfacePro
     : 'bg-secondary rounded-2xl rounded-tl-sm p-4';
 
   return (
-    <div className={`${containerClass} rounded-2xl overflow-hidden max-w-l w-full`}>
+    <div className={`${containerClass} rounded-2xl overflow-hidden max-w-md w-full`}>
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-border">
         <div className="flex items-center gap-3">

@@ -32,13 +32,13 @@ const ChatSection = ({ onTrialsExhausted }: ChatSectionProps) => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-start gap-8 lg:gap-16 max-w-5xl mx-auto">
           {/* Reviews - Left on desktop */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="order-2 lg:order-1"
+            className="order-2 lg:order-1 w-full max-w-md"
           >
             <ReviewsScroll variant="light" />
           </motion.div>
@@ -48,7 +48,7 @@ const ChatSection = ({ onTrialsExhausted }: ChatSectionProps) => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="order-1 lg:order-2"
+            className="order-1 lg:order-2 w-full max-w-md"
           >
             <ChatInterface variant="light" onTrialsExhausted={onTrialsExhausted} />
           </motion.div>
