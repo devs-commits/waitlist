@@ -5,7 +5,7 @@ import wdcLogo from '../assets/wdc-logo.jpg';
 
 const PhysicalAnchor = () => {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary/50">
+    <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
         <motion.div
           className="max-w-4xl mx-auto text-center"
@@ -27,15 +27,15 @@ const PhysicalAnchor = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto ">
           {/* Wild Fusion Digital Centre */}
           <motion.div
-            className="bg-card border border-border rounded-2xl p-8 text-center hover:border-primary/50 transition-all duration-300"
+            className="bg-[hsla(207,36%,95%,1)] border border-border rounded-2xl p-8 text-center hover:border-primary/50 transition-all duration-300"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="w-32 h-16 mx-auto mb-6 flex items-center justify-center">
+            <div className="w-32h-16 mx-auto mb-6 flex items-center justify-center">
               <img src={wdcLogo} alt="Wild Fusion Digital Centre" className="h-full w-auto object-contain" />
             </div>
             <h3 className="text-xl font-bold text-foreground mb-2">Wild Fusion Digital Centre</h3>
