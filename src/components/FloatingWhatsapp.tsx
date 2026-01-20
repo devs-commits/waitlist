@@ -19,7 +19,7 @@ const FloatingWhatsApp = () => {
       whileTap={{ scale: 0.95 }}
     >
       <MessageCircle className="w-6 h-6" />
-      <span className="font-semibold text-sm hidden md:block">Human Support</span>
+      <span className="font-semibold text-sm hidden md:block">Whatsapp Support</span>
       
       {/* Pulse effect */}
       <span className="absolute -top-1 -right-1 flex h-4 w-4">
