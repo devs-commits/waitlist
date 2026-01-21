@@ -1,17 +1,11 @@
 import { motion } from 'framer-motion';
-import FeatureCardDark from './FeatureCardDark';
 import FeatureCardLight from './FeatureCardLight';
 import { Building2, FileText, Briefcase, Users } from 'lucide-react';
 import virtualOffice from '../assets/virtual-office.png';
 import recommendationLetter from '../assets/recommendation-letter.png';
 import livePortfolio from '../assets/live-portfolio.jpg';
 import teamMeeting from '../assets/team-meeting.jpg';
-
-interface ArsenalSectionProps {
-  variant?: 'dark' | 'light';
-}
-
-const ArsenalSection = ({ variant = 'dark' }: ArsenalSectionProps) => {
+const ArsenalSection = () => {
   const features = [
     {
       icon: <Building2 className="w-8 h-8" />,
@@ -41,14 +35,13 @@ const ArsenalSection = ({ variant = 'dark' }: ArsenalSectionProps) => {
       image: teamMeeting,
       accentColor: 'yellow' as const,
     },
-  ];
+  ];{
 
-  if (variant === 'light') {
-    return (
-      <section className="py-16 md:py-24 bg-[hsla(207,36%,95%,1)]" id="arsenal">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
+  return (
+    <section className="py-16 md:py-24 bg-[hsla(207,36%,95%,1)]" id="arsenal">
+      <div className="container mx-auto px-4">
+        <motion.div
+          className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -76,40 +69,6 @@ const ArsenalSection = ({ variant = 'dark' }: ArsenalSectionProps) => {
       </section>
     );
   }
-
-
-  return (
-    <section className="bg-[hsla(207,36%,95%,1)] py-16 md:py-24" id="arsenal">
-      <div className="container mx-auto px-4">
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
-            The ₦15k Arsenal
-          </h2>
-          <p className="text-sm text-muted-foreground max-w-xl mx-auto">
-            Most courses give you videos. We give you assets that get you hired. This is what your subscription actually buys.
-          </p>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => (
-            <FeatureCardDark
-              key={feature.title}
-              icon={feature.icon}
-              title={feature.title}
-              description={feature.description}
-              accentColor={feature.accentColor}
-              delay={index * 0.1}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
 };
 
 export default ArsenalSection;

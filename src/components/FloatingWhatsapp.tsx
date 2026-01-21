@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 
 const FloatingWhatsApp = () => {
-  const whatsappNumber = '+2349078298987'; // Replace with actual number
+  const whatsappNumber = '+2348130807750'; // Replace with actual number
   const message = encodeURIComponent("Hi! I need support regarding WDC Labs.");
   
   const handleClick = () => {
