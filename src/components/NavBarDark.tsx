@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import wdcLogo from '../assets/wdc-logo.jpg';
+import actd from '../assets/actd-logo.png';
 
 interface NavbarDarkProps {
   onChatClick?: () => void;
@@ -44,12 +45,17 @@ const NavbarDark = ({ onChatClick, onJoinWaitlistClick }: NavbarDarkProps) => {
 
           {/* CTA Button */}
           <div className="hidden md:block mr-20">
-            <Button 
+            {/* <Button 
               onClick={onJoinWaitlistClick}
               className="btn-primary-gradient text-primary-foreground px-6"
             >
               Join Waitlist
-            </Button>
+            </Button> */}
+            <div className="max-w-7xl justify-left md:ml-20 sm:ml-5">
+              <a href="/" className="flex items-left">
+                <img src={actd} alt="WDC Labs" className="h-[50px] w-[60px] sm:h-[65px] sm:w-[65px]" />
+              </a>
+          </div>
           </div>
 
           {/* Mobile Menu Toggle */}
