@@ -21,16 +21,16 @@ const NavbarDark = ({ onChatClick, onJoinWaitlistClick }: NavbarDarkProps) => {
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-border bg-[hsla(207,36%,95%,1)]">
-      <div className="mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
-          <div className="max-w-7xl justify-left md:ml-20 sm:ml-5">
+      <div className="mx-auto px-4 my-auto">
+        <div className="flex h-20 items-center justify-between">
+          <div className="max-w-7xl justify-left md:ml-10 sm:ml-5">
               <a href="/" className="flex items-left">
                 <img src={wdcLogo} alt="WDC Labs" className="h-[50px] w-[120px] sm:h-[55px] sm:w-[180px]" />
               </a>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8 my-auto">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -45,7 +45,7 @@ const NavbarDark = ({ onChatClick, onJoinWaitlistClick }: NavbarDarkProps) => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <div className="max-w-7xl justify-left md:mr-20 sm:mr-5 my-auto py-3">
+            <div className="max-w-7xl justify-left md:mr-10 sm:mr-5 my-auto">
               <a href="/" className="flex items-left">
                 <img src={actd_logo} alt="WDC Labs" className="h-[50px] w-[180px] sm:h-[65px] sm:w-[200px]" />
               </a>
