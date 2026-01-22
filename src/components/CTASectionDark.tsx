@@ -39,7 +39,7 @@ const CTASectionDark = ({ onSecureSpotClick }: CTASectionDarkProps) => {
             </p>
             <Button 
               onClick={onSecureSpotClick}
-              className="btn-coral-gradient text-foreground px-8 py-6 text-base font-semibold"
+              className="btn-coral-gradient text-white px-8 py-6 text-base font-semibold"
             >
               Secure your spot now
             </Button>
