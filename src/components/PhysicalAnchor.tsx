@@ -68,7 +68,7 @@ const PhysicalAnchor = () => {
               Accredited by the American Council of Training and Development. Your certificate is internationally recognized.
             </p>
             <a
-              href="https://www.actd.us"
+              href="https://www.actd.us/wildfusiondigitalcentre/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-[#c5a54e] hover:text-[#c5a54e]/80 text-sm font-semibold transition-colors"
