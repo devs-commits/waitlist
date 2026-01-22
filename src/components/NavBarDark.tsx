@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import wdcLogo from '../assets/wdc-logo.jpg';
-import actd from '../assets/actd-logo.png';
+import actd_logo from '../assets/ACTD.png';
 
 interface NavbarDarkProps {
   onChatClick?: () => void;
@@ -44,10 +44,10 @@ const NavbarDark = ({ onChatClick, onJoinWaitlistClick }: NavbarDarkProps) => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block mr-20">
-            <div className="max-w-7xl justify-left md:ml-20 sm:ml-5">
+          <div className="hidden md:block">
+            <div className="max-w-7xl justify-left md:mr-20 sm:mr-5 my-auto py-3">
               <a href="/" className="flex items-left">
-                <img src={actd} alt="WDC Labs" className="h-[50px] w-[60px] sm:h-[65px] sm:w-[65px]" />
+                <img src={actd_logo} alt="WDC Labs" className="h-[50px] w-[180px] sm:h-[65px] sm:w-[200px]" />
               </a>
           </div>
           </div>
