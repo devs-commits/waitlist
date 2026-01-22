@@ -45,12 +45,6 @@ const NavbarDark = ({ onChatClick, onJoinWaitlistClick }: NavbarDarkProps) => {
 
           {/* CTA Button */}
           <div className="hidden md:block mr-20">
-            {/* <Button 
-              onClick={onJoinWaitlistClick}
-              className="btn-primary-gradient text-primary-foreground px-6"
-            >
-              Join Waitlist
-            </Button> */}
             <div className="max-w-7xl justify-left md:ml-20 sm:ml-5">
               <a href="/" className="flex items-left">
                 <img src={actd} alt="WDC Labs" className="h-[50px] w-[60px] sm:h-[65px] sm:w-[65px]" />
