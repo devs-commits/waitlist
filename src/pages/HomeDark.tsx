@@ -9,9 +9,9 @@ import FooterDark from '../components/FooterDark';
 import WaitlistModal from '../components/WaitlistModal';
 import SponsorModal from '../components/SponsorModal';
 import SuccessModal from '../components/SuccessModal';
-import FreeTasteTest from '../components/FreeTasteTest';
+// import FreeTasteTest from '../components/FreeTasteTest';
 import HallOfFailures from '../components/HallOfFailures';
-import PhysicalAnchor from '../components/PhysicalAnchor';
+// import PhysicalAnchor from '../components/PhysicalAnchor';
 import FloatingWhatsApp from '../components/FloatingWhatsapp';
 
 const HomeDark = () => {
@@ -49,12 +49,12 @@ const HomeDark = () => {
         />
       </div>
       <ArsenalSection  />
-      <FreeTasteTest />
+      {/* <FreeTasteTest /> */}
       <div id="chat">
         <ChatSectionDark onTrialsExhausted={() => setIsWaitlistOpen(true)} />
       </div>
       <HallOfFailures />
-      <PhysicalAnchor />
+      {/* <PhysicalAnchor /> */}
       <PricingSection 
         variant="light" 
         onPayClick={handleWaitlistClick}
