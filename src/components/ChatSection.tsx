@@ -1,38 +1,41 @@
 import { motion } from 'framer-motion';
 import ChatInterface from './ChatInterface';
 import ReviewsScroll from './ReviewsScroll';
-// import { Sparkles } from 'lucide-react';
+import chatBgCircle from './../assets/circle.png';
 
-interface ChatSectionProps {
+interface ChatSectionV3Props {
   onTrialsExhausted?: () => void;
 }
 
-const ChatSection = ({ onTrialsExhausted }: ChatSectionProps) => {
+const ChatSectionV3 = ({ onTrialsExhausted }: ChatSectionV3Props) => {
   return (
-    <section className="py-8 md:py-12 bg-[hsla(207,36%,95%,1)]" id="chat-with-tolu">
-      <div className="container mx-auto px-4">
+    <section className="py-16 md:py-24 bg-[#c8d3dc] relative overflow-hidden" id="chat-with-tolu">
+      {/* Background circle */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <img 
+          src={chatBgCircle} 
+          alt="" 
+          className="w-[900px] h-[900px] object-contain opacity-100"
+        />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          {/* Free Badge */}
-          {/* <div className="inline-flex items-center gap-2 bg-teal/10 text-teal px-4 py-2 rounded-full text-sm font-semibold mb-6">
-            <Sparkles className="w-4 h-4" />
-            FREE TASTE TEST - No Payment Required
-          </div> */}
-          
-          <h2 className="text-2xl md:text-4xl font-bold text-black mb-4">
-            Meet Tolu. <span className="text-coral">Your Nightmare.</span>
+          <h2 className="text-2xl md:text-4xl font-bold text-[#1a2744] mb-4">
+            Meet Tolu. <span className="text-[#ff6b35]">Your Nightmare.</span>
           </h2>
-          <p className="text-sm text-muted-foreground max-w-xl mx-auto">
+          <p className="text-base text-[#4a5568] max-w-2xl mx-auto">
             Tolu is our AI HR Manager. She doesn't care about your "passion". She cares about output. You have exactly{' '}
-            <span className="text-coral font-semibold">3 chances</span> to impress her before she blocks you.
+            <span className="text-[#22c55e] font-semibold">3 chances</span> to impress her before she blocks you.
           </p>
         </motion.div>
 
-        <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-start gap-8 lg:gap-16 max-w-5xl mx-auto">
+        <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-8 lg:gap-12 max-w-5xl mx-auto">
           {/* Reviews - Left on desktop */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -40,7 +43,7 @@ const ChatSection = ({ onTrialsExhausted }: ChatSectionProps) => {
             viewport={{ once: true }}
             className="order-2 lg:order-1 w-full max-w-md"
           >
-            <ReviewsScroll variant="light" />
+            <ReviewsScroll variant="v3" />
           </motion.div>
 
           {/* Chat Interface - Right on desktop */}
@@ -50,7 +53,7 @@ const ChatSection = ({ onTrialsExhausted }: ChatSectionProps) => {
             viewport={{ once: true }}
             className="order-1 lg:order-2 w-full max-w-md"
           >
-            <ChatInterface variant="light" onTrialsExhausted={onTrialsExhausted} />
+            <ChatInterface variant="v3" onTrialsExhausted={onTrialsExhausted} />
           </motion.div>
         </div>
       </div>
@@ -58,4 +61,4 @@ const ChatSection = ({ onTrialsExhausted }: ChatSectionProps) => {
   );
 };
 
-export default ChatSection;
+export default ChatSectionV3;

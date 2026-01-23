@@ -64,7 +64,7 @@ const PricingSection = ({ variant = 'light', onPayClick, onSponsorClick, showRef
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
           {plans.map((plan, index) => (
             <PricingCard
               key={plan.name}

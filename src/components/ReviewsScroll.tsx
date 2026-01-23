@@ -8,7 +8,7 @@ import avatarBlessing from '../assets/blessing.jpg';
 import avatarEmeka from '../assets/avatar-male.png';
 
 interface ReviewsScrollProps {
-  variant?: 'dark' | 'light';
+  variant?: 'dark' | 'light' | 'v3';
 }
 
 const reviews = [
@@ -50,6 +50,26 @@ const ReviewsScroll = ({ variant = 'dark' }: ReviewsScrollProps) => {
 
   // Duplicate reviews for seamless loop
   const duplicatedReviews = [...reviews, ...reviews];
+
+  // V3 design - only show first 3 reviews stacked
+  if (variant === 'v3') {
+    const displayReviews = reviews.slice(0, 3);
+    
+    return (
+      <div className="flex flex-col gap-4 w-full max-w-md">
+        {displayReviews.map((review, index) => (
+          <ReviewCard
+            key={`${review.name}-${index}`}
+            name={review.name}
+            location={review.location}
+            content={review.content}
+            avatar={review.avatar}
+            variant="v3"
+          />
+        ))}
+      </div>
+    );
+  }
 
   return (
     <div 

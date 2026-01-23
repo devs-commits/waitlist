@@ -13,12 +13,12 @@ interface Message {
 }
 
 interface ChatInterfaceProps {
-  variant?: 'dark' | 'light';
+  variant?: 'dark' | 'light' | 'v3';
   onSendMessage?: (message: string) => Promise<string>;
   onTrialsExhausted?: () => void;
 }
 
-const ChatInterface = ({ variant = 'dark', onTrialsExhausted }: ChatInterfaceProps) => {
+const ChatInterface = ({ variant = 'dark', onSendMessage, onTrialsExhausted }: ChatInterfaceProps) => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
@@ -31,18 +31,14 @@ const ChatInterface = ({ variant = 'dark', onTrialsExhausted }: ChatInterfacePro
   const [isTyping, setIsTyping] = useState(false);
   const [turnsLeft, setTurnsLeft] = useState(3);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const messagesContainerRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
-    // Scroll within the chat container only, not the entire page
-    if (messagesContainerRef.current) {
-      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
-    }
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages, isTyping]);
+  }, [messages]);
 
   const handleSendMessage = async () => {
     if (!inputValue.trim() || turnsLeft <= 0) return;
@@ -95,6 +91,106 @@ const ChatInterface = ({ variant = 'dark', onTrialsExhausted }: ChatInterfacePro
     }
   };
 
+  // V3 design (exact match to reference)
+  if (variant === 'v3') {
+    return (
+      <div className="bg-white rounded-2xl overflow-hidden max-w-md w-full shadow-xl">
+        {/* Header */}
+        <div className="flex items-center justify-between p-4 border-b border-gray-100">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-full overflow-hidden">
+              <img 
+                src={avatarTolu} 
+                alt="Tolu - AI HR Manager" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <h3 className="font-bold text-[#1a2744] text-base">Tolu (AI HR)</h3>
+              <div className="flex items-center gap-1.5">
+                <div className="w-2 h-2 rounded-full bg-[#22c55e]" />
+                <p className="text-xs text-[#ff6b35] font-medium">Status: JUDGING YOU</p>
+              </div>
+            </div>
+          </div>
+          <div className="bg-[#22c55e] text-white px-3 py-1 rounded text-xs font-bold">
+            {turnsLeft} TURNS LEFT
+          </div>
+        </div>
+
+        {/* Messages */}
+        <div className="h-64 overflow-y-auto p-4 space-y-4 bg-white">
+          <AnimatePresence>
+            {messages.map((message) => (
+              <motion.div
+                key={message.id}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
+              >
+                {message.role === 'ai' ? (
+                  <div className="max-w-[90%]">
+                    <p className="text-sm font-bold text-[#1a2744] mb-2">Tolu</p>
+                    <div className="bg-[#e8eaed] rounded-2xl p-4">
+                      <p className="text-sm text-[#1a2744]">{message.content}</p>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="bg-[#1a2744] text-white rounded-2xl p-4 max-w-[85%]">
+                    <p className="text-sm">{message.content}</p>
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </AnimatePresence>
+          
+          {isTyping && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="flex justify-start"
+            >
+              <div className="max-w-[90%]">
+                <p className="text-sm font-bold text-[#1a2744] mb-2">Tolu</p>
+                <div className="bg-[#e8eaed] rounded-2xl p-4">
+                  <div className="flex gap-1">
+                    <span className="w-2 h-2 bg-[#1a2744] rounded-full animate-pulse" />
+                    <span className="w-2 h-2 bg-[#1a2744] rounded-full animate-pulse delay-100" />
+                    <span className="w-2 h-2 bg-[#1a2744] rounded-full animate-pulse delay-200" />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
+          
+          <div ref={messagesEndRef} />
+        </div>
+
+        {/* Input */}
+        <div className="bg-[#1a2744] p-4">
+          <div className="flex items-center gap-3">
+            <input
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              onKeyPress={handleKeyPress}
+              placeholder={turnsLeft <= 0 ? "Session ended. Join waitlist above." : "Type your defense here..."}
+              disabled={turnsLeft <= 0}
+              className="flex-1 bg-transparent border-none text-white placeholder:text-gray-400 text-sm focus:outline-none"
+            />
+            <button
+              onClick={handleSendMessage}
+              disabled={!inputValue.trim() || turnsLeft <= 0}
+              className="text-gray-400 hover:text-white transition-colors disabled:opacity-50"
+            >
+              <Send className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   const containerClass = variant === 'dark' 
     ? 'chat-interface' 
     : 'bg-card border border-border shadow-xl';
@@ -128,7 +224,7 @@ const ChatInterface = ({ variant = 'dark', onTrialsExhausted }: ChatInterfacePro
       </div>
 
       {/* Messages */}
-      <div ref={messagesContainerRef} className="h-64 overflow-y-auto p-4 space-y-4">
+      <div className="h-64 overflow-y-auto p-4 space-y-4">
         <AnimatePresence>
           {messages.map((message) => (
             <motion.div
