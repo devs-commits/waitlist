@@ -31,7 +31,7 @@ const PricingCard = ({
 }: PricingCardProps) => {
   const cardBgClass = isFeatured 
     ? 'bg-[hsla(205,98%,16%,1)] text-white' 
-    : 'bg-white text-[#1a2744] shadow-lg';
+    : 'bg-[hsla(0,0%,91%,1)] text-[#1a2744] shadow-lg';
   
   const textPrimaryClass = isFeatured ? 'text-white' : 'text-[#1a2744]';
   const textSecondaryClass = isFeatured ? 'text-white/80' : 'text-[#1a2744]/70';
@@ -91,8 +91,8 @@ const PricingCard = ({
           onClick={onPayYourselfClick}
           className={`w-full py-5 font-semibold ${
             isFeatured 
-              ? 'bg-[hsla(244,100%,69%,1)] hover:bg-violet-700 text-white' 
-              : 'bg-[hsla(205,98%,16%,1)] hover:bg-[#243354] text-white'
+              ? 'bg-[hsla(244,100%,69%,1)] hover:bg-[hsla(244,100%,69%,1)]/50 text-white' 
+              : 'bg-[hsla(205,98%,16%,1)] hover:bg-[hsla(205,98%,16%,1)]/50 text-white'
           }`}
         >
           Pay Yourself
@@ -102,8 +102,8 @@ const PricingCard = ({
           variant="outline"
           className={`w-full py-5 font-medium ${
             isFeatured 
-              ? 'border-[hsla(244,100%,69%,1)] text-white hover:bg-white/10 bg-transparent' 
-              : 'border-[hsla(205,98%,16%,1)] text-[#1a2744] hover:bg-[#1a2744]/5'
+              ? 'border-[hsla(244,100%,69%,1)] text-[hsla(244,100%,69%,1)] hover:bg-white/10 bg-transparent' 
+              : 'border-[hsla(205,98%,16%,1)] text-[hsla(205,98%,16%,1)] hover:bg-[#1a2744]/5'
           }`}
         >
           Ask Mentor to Pay
