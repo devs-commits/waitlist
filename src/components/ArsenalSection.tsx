@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import FeatureCardLight from './FeatureCardLight';
+import FeatureCardDark from './FeatureCardDark';
 import { Building2, FileText, Briefcase, Users } from 'lucide-react';
 import virtualOffice from '../assets/virtual-office.png';
 import recommendationLetter from '../assets/recommendation-letter.png';
@@ -26,7 +26,7 @@ const ArsenalSection = () => {
       title: 'Live Portfolio',
       description: 'We convert your chaotic tasks into sleek case studies. Send one link to recruiters, not a zip file.',
       image: livePortfolio,
-      accentColor: 'teal' as const,
+      accentColor: 'purple' as const,
     },
     {
       icon: <Users className="w-8 h-8" />,
@@ -38,35 +38,36 @@ const ArsenalSection = () => {
   ];{
 
   return (
-    <section className="py-16 md:py-24 bg-[hsla(207,36%,95%,1)]" id="arsenal">
+    <section className="bg-[hsla(220,13%,95%,1)] py-16 md:py-24" id="arsenal">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-2xl md:text-4xl font-bold text-black mb-4">
-              The ₦15k Arsenal
-            </h2>
-            <p className="text-sm text-black max-w-xl mx-auto">
-              Most courses give you videos. We give you assets that get you hired. This is what your subscription actually buys.
-            </p>
-          </motion.div>
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
+            The ₦15k Arsenal
+          </h2>
+          <p className="text-sm text-muted-foreground max-w-xl mx-auto">
+            Most courses give you videos. We give you assets that get you hired. This is what your subscription actually buys.
+          </p>
+        </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <FeatureCardLight
-                key={feature.title}
-                image={feature.image}
-                title={feature.title}
-                description={feature.description}
-                delay={index * 0.1}
-              />
-            ))}
-          </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((feature, index) => (
+            <FeatureCardDark
+              key={feature.title}
+              icon={feature.icon}
+              title={feature.title}
+              description={feature.description}
+              accentColor={feature.accentColor}
+              delay={index * 0.1}
+            />
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
     );
   }
 };

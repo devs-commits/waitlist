@@ -5,7 +5,7 @@ interface FeatureCardDarkProps {
   icon: ReactNode;
   title: string;
   description: string;
-  accentColor?: 'teal' | 'coral' | 'yellow';
+  accentColor?: 'teal' | 'coral' | 'yellow' | 'purple';
   delay?: number;
 }
 
@@ -17,14 +17,15 @@ const FeatureCardDark = ({
   delay = 0 
 }: FeatureCardDarkProps) => {
   const accentClasses = {
-    teal: 'text-teal',
-    coral: 'text-coral',
-    yellow: 'text-yellow',
+    teal: 'text-[hsla(135,90%,41%,1)]',
+    coral: 'text-[hsla(220,94%,62%,1)]',
+    yellow: 'text-[hsla(45,78%,50%,1)]',
+    purple: 'text-[hsla(271,85%,64%,1)]'
   };
 
   return (
     <motion.div
-      className="feature-card rounded-xl p-6 h-full"
+      className="feature-card-light rounded-xl p-6 h-full"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
