@@ -13,78 +13,82 @@ const HeroSectionDark = ({ onSecureSpotClick, onMentorPayClick }: HeroSectionDar
   const targetDate = new Date('2026-01-30T00:00:00');
 
   return (
-    <section className="flex flex-col border border-border mx-[90px] rounded-3xl shadow-lg overflow-hidden my-10">
-      <WarningBanner/>
-      <div className="flex-1 flex items-center justify-center px-4 py-4">
-        <div className="max-w-3xl mx-auto text-center text-black-500">
-          <motion.h1 
-            className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 text-black"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            Experience is the New Currency.
-            <br />
-            <span className="text-3xl text-purple-500">Secure Your Future Now.</span>
-          </motion.h1>
+    <section className="flex flex-col border border-border mx-auto rounded-3xl shadow-lg overflow-hidden my-10 justify-center px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <main className="flex items-center justify-center sm:p-6 lg:p-8 w-full">
+        <div className="w-full h-full rounded-2xl p-4 sm:p-12 lg:p-16 animate-scale-in">
+          <WarningBanner/>
+          <div className="flex-1 flex items-center justify-center px-4 py-4">
+            <div className="max-w-3xl mx-auto text-center text-black-500">
+              <motion.h1 
+                className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 text-black"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                Experience is the New Currency.
+                <br />
+                <span className="text-3xl text-purple-500">Secure Your Future Now.</span>
+              </motion.h1>
 
-          <motion.p 
-            className="text-sm md:text-base text-black max-w-xl mx-auto mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            By 2026, "Entry Level" jobs will require 2 years of experience. <span className="font-bold text-black">WDC Labs</span> gives you that experience in 3 months. Don't gamble with your career. Get the cheat code.
-          </motion.p>
+              <motion.p 
+                className="text-sm md:text-base text-black max-w-[600px] mx-auto mb-8"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+              >
+                By 2026, "Entry Level" jobs will require 2 years of experience. <span className="font-bold text-black">WDC Labs</span> gives you that experience in 3 months. Don't gamble with your career. Get the cheat code.
+              </motion.p>
 
-          <motion.div
-            className="mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <p className="text-xs md:text-sm text-purple-500 font-semibold tracking-wider mb-4">
-              LAUNCH DEADLINE: JAN 30, 2026
-            </p>
-            <div className="flex justify-center">
-              <CountdownTimer targetDate={targetDate} variant="light" />
+              <motion.div
+                className="mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <p className="text-xs md:text-sm text-purple-500 font-semibold tracking-wider mb-4">
+                  LAUNCH DEADLINE: JAN 30, 2026
+                </p>
+                <div className="flex justify-center">
+                  <CountdownTimer targetDate={targetDate} variant="light" />
+                </div>
+              </motion.div>
+
+              <motion.div 
+                className="flex flex-col sm:flex-row gap-3 justify-center mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                <Button 
+                  onClick={onSecureSpotClick}
+                  variant="ghost"
+                  className="text-white px-8 py-6 text-base font-semibold"
+                >
+                  <Lock className="w-4 h-4 mr-2" />
+                  SECURE MY SPOT
+                </Button>
+                <Button 
+                  onClick={onMentorPayClick}
+                  variant="outline"
+                  className=" px-8 py-6 text-black text-base"
+                >
+                  <Gift className="w-4 h-4 mr-2" />
+                  ASK MENTOR TO PAY
+                </Button>
+              </motion.div>
+
+              <motion.p 
+                className="text-xs text-black"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                No credit card required for waitlist. Verify via LinkedIn.
+              </motion.p>
             </div>
-          </motion.div>
-
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-3 justify-center mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <Button 
-              onClick={onSecureSpotClick}
-              variant="ghost"
-              className="text-white px-8 py-6 text-base font-semibold"
-            >
-              <Lock className="w-4 h-4 mr-2" />
-              SECURE MY SPOT
-            </Button>
-            <Button 
-              onClick={onMentorPayClick}
-              variant="outline"
-              className=" px-8 py-6 text-black text-base"
-            >
-              <Gift className="w-4 h-4 mr-2" />
-              ASK MENTOR TO PAY
-            </Button>
-          </motion.div>
-
-          <motion.p 
-            className="text-xs text-black"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            No credit card required for waitlist. Verify via LinkedIn.
-          </motion.p>
+          </div>
         </div>
-      </div>
+      </main>
     </section>
   );
 };
