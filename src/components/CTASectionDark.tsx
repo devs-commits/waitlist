@@ -10,7 +10,7 @@ const CTASectionDark = ({ onSecureSpotClick }: CTASectionDarkProps) => {
   return (
     <section className="bg-[hsla(207,36%,95%,1)] py-6 md:py-4">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-8 items-center bg-white border border-border rounded-3xl p-8 md:p-16 shadow-lg">
+        <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-8 items-center bg-[hsla(0,0%,100%,1)] border border-border rounded-3xl p-8 md:p-16 shadow-lg">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -39,7 +39,7 @@ const CTASectionDark = ({ onSecureSpotClick }: CTASectionDarkProps) => {
             </p>
             <Button 
               onClick={onSecureSpotClick}
-              className="btn-coral-gradient text-white px-8 py-6 text-base font-semibold"
+              className="bg-[hsla(205,98%,16%,1)] text-white px-8 py-6 text-base font-semibold"
             >
               Secure your spot now
             </Button>
