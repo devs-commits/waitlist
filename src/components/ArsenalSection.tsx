@@ -38,7 +38,7 @@ const ArsenalSection = () => {
   ];{
 
   return (
-    <section className="bg-[hsla(220,13%,95%,1)] py-16 md:py-24" id="arsenal">
+    <section className="bg-[hsla(220,13%,95%,1)] py-8 md:py-12" id="arsenal">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"
