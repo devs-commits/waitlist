@@ -17,6 +17,14 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        'four-corner': `
+          radial-gradient(circle at top left, hsla(0, 0%, 100%, 0.23), transparent 50%),
+          radial-gradient(circle at top right, hsla(145, 100%, 39%, 0.23), transparent 50%),
+          radial-gradient(circle at bottom right, hsla(258, 52%, 19%, 0.32), transparent 50%),
+          radial-gradient(circle at bottom left, hsla(191, 98%, 43%, 0.23), transparent 50%)
+        `,
+      },
       fontFamily: {
         sans: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
       },

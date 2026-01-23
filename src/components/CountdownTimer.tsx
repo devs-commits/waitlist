@@ -55,8 +55,8 @@ const CountdownTimer = ({ targetDate, variant = 'dark' }: CountdownTimerProps) =
             key={unit.label}
             className={`flex flex-col items-center justify-center w-14 h-16 md:w-16 md:h-20 rounded-lg ${
               unit.isAccent 
-                ? 'bg-teal text-primary-foreground' 
-                : 'bg-primary text-primary-foreground'
+                ? 'bg-[hsla(216,36%,18%,1)] text-[hsla(359,100%,61%,1)]' 
+                : 'bg-[hsla(216,36%,18%,1)] text-primary-foreground'
             }`}
           >
             <span className="text-xl md:text-2xl font-bold">
