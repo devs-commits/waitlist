@@ -10,7 +10,7 @@ import WaitlistModal from '../components/WaitlistModal';
 import SponsorModal from '../components/SponsorModal';
 import SuccessModal from '../components/SuccessModal';
 // import FreeTasteTest from '../components/FreeTasteTest';
-import HallOfFailures from '../components/HallOfFailures';
+// import HallOfFailures from '../components/HallOfFailures';
 // import PhysicalAnchor from '../components/PhysicalAnchor';
 import FloatingWhatsApp from '../components/FloatingWhatsapp';
 
@@ -53,7 +53,7 @@ const HomeDark = () => {
       <div id="chat">
         <ChatSectionDark onTrialsExhausted={() => setIsWaitlistOpen(true)} />
       </div>
-      <HallOfFailures />
+      {/* <HallOfFailures /> */}
       {/* <PhysicalAnchor /> */}
       <PricingSection 
         variant="light" 
