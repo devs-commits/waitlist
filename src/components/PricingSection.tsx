@@ -47,7 +47,7 @@ const plans = [
 
 const PricingSection = ({ variant = 'light', onPayClick, onSponsorClick, showRefundBadge = true }: PricingSectionProps) => {
   return (
-    <section className={`py-16 md:py-24 ${variant === 'dark' ? 'section-dark' : 'bg-[hsla(207,36%,95%,1)]'}`} id="pricing">
+    <section className={`py-8 md:py-6 ${variant === 'dark' ? 'section-dark' : 'bg-[hsla(207,36%,95%,1)]'}`} id="pricing">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"
