@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import ChatInterface from './ChatInterface';
 import ReviewsScroll from './ReviewsScroll';
-import { Sparkles } from 'lucide-react';
+// import { Sparkles } from 'lucide-react';
 
 interface ChatSectionProps {
   onTrialsExhausted?: () => void;
@@ -9,7 +9,7 @@ interface ChatSectionProps {
 
 const ChatSection = ({ onTrialsExhausted }: ChatSectionProps) => {
   return (
-    <section className="py-16 md:py-24 bg-[hsla(207,36%,95%,1)]" id="chat-with-tolu">
+    <section className="py-8 md:py-12 bg-[hsla(207,36%,95%,1)]" id="chat-with-tolu">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"
@@ -18,10 +18,10 @@ const ChatSection = ({ onTrialsExhausted }: ChatSectionProps) => {
           viewport={{ once: true }}
         >
           {/* Free Badge */}
-          <div className="inline-flex items-center gap-2 bg-teal/10 text-teal px-4 py-2 rounded-full text-sm font-semibold mb-6">
+          {/* <div className="inline-flex items-center gap-2 bg-teal/10 text-teal px-4 py-2 rounded-full text-sm font-semibold mb-6">
             <Sparkles className="w-4 h-4" />
             FREE TASTE TEST - No Payment Required
-          </div>
+          </div> */}
           
           <h2 className="text-2xl md:text-4xl font-bold text-black mb-4">
             Meet Tolu. <span className="text-coral">Your Nightmare.</span>

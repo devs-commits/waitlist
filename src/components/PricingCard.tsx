@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Button } from '../components/ui/button';
-import { Check, Shield } from 'lucide-react';
+import { Check} from 'lucide-react';
 
 interface PricingPlan {
   name: string;
@@ -27,15 +27,15 @@ const PricingCard = ({
   delay = 0,
   onPayYourselfClick,
   onAskSponsorClick,
-  showRefundBadge = false,
+  // showRefundBadge = false,
 }: PricingCardProps) => {
   const cardBgClass = isFeatured 
-    ? 'bg-[#1a2744] text-white' 
+    ? 'bg-[hsla(205,98%,16%,1)] text-white' 
     : 'bg-white text-[#1a2744] shadow-lg';
   
   const textPrimaryClass = isFeatured ? 'text-white' : 'text-[#1a2744]';
   const textSecondaryClass = isFeatured ? 'text-white/80' : 'text-[#1a2744]/70';
-  const periodClass = isFeatured ? 'text-violet-400' : 'text-violet-600';
+  const periodClass = isFeatured ? 'text-[hsla(244,100%,69%,1)]' : 'text-[hsla(244,100%,69%,1)]';
   const checkClass = isFeatured ? 'text-violet-400' : 'text-violet-600';
 
   return (
@@ -48,7 +48,7 @@ const PricingCard = ({
     >
       {isFeatured && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span className="bg-violet-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-wide">
+          <span className="bg-[hsla(244,100%,69%,1)] text-white text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-wide">
             Best Value
           </span>
         </div>
@@ -71,7 +71,7 @@ const PricingCard = ({
         ))}
       </ul>
 
-      {/* 7-Day Refund Badge */}
+      {/* 7-Day Refund Badge
       {showRefundBadge && (
         <div className={`mb-4 inline-flex items-center gap-2 ${
           isFeatured 
@@ -84,15 +84,15 @@ const PricingCard = ({
             <span className="text-[10px] opacity-80">Money-Back Guarantee</span>
           </div>
         </div>
-      )}
+      )} */}
 
       <div className="space-y-3">
         <Button 
           onClick={onPayYourselfClick}
           className={`w-full py-5 font-semibold ${
             isFeatured 
-              ? 'bg-violet-600 hover:bg-violet-700 text-white' 
-              : 'bg-[#1a2744] hover:bg-[#243354] text-white'
+              ? 'bg-[hsla(244,100%,69%,1)] hover:bg-violet-700 text-white' 
+              : 'bg-[hsla(205,98%,16%,1)] hover:bg-[#243354] text-white'
           }`}
         >
           Pay Yourself
@@ -102,8 +102,8 @@ const PricingCard = ({
           variant="outline"
           className={`w-full py-5 font-medium ${
             isFeatured 
-              ? 'border-white/30 text-white hover:bg-white/10 bg-transparent' 
-              : 'border-[#1a2744]/30 text-[#1a2744] hover:bg-[#1a2744]/5'
+              ? 'border-[hsla(244,100%,69%,1)] text-white hover:bg-white/10 bg-transparent' 
+              : 'border-[hsla(205,98%,16%,1)] text-[#1a2744] hover:bg-[#1a2744]/5'
           }`}
         >
           Ask Mentor to Pay

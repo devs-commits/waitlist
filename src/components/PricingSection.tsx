@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import PricingCard from './PricingCard';
-import DiasporaShield from './DiasporaShield';
+// import DiasporaShield from './DiasporaShield';
 
 interface PricingSectionProps {
   variant?: 'dark' | 'light';
@@ -57,7 +57,7 @@ const PricingSection = ({ variant = 'light', onPayClick, onSponsorClick, showRef
         >
           <h2 className="text-2xl md:text-4xl font-bold text-black mb-4">
             Invest in Your Future.{' '}
-            <span className="text-coral">Or Get Someone Else To.</span>
+            <span className="text-[hsla(244,100%,69%,1)]">Or Get Someone Else To.</span>
           </h2>
           <p className="text-sm text-muted-foreground max-w-md mx-auto">
             Can't afford the subscription? Don't let that stop you. Send a sponsorship link to a mentor.
@@ -77,9 +77,9 @@ const PricingSection = ({ variant = 'light', onPayClick, onSponsorClick, showRef
             />
           ))}
         </div>
-
-        {/* Diaspora Shield - Payment Logos */}
-        <DiasporaShield />
+{/* 
+        Diaspora Shield - Payment Logos
+        <DiasporaShield /> */}
       </div>
     </section>
   );
