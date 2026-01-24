@@ -67,8 +67,8 @@ const PricingCard = ({
             <li key={feature} className="flex items-center gap-3">
               <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 ${
                 isFeatured 
-                  ? 'bg-violet-500' 
-                  : 'bg-violet-600'
+                  ? 'bg-[hsla(205,98%,16%,1)]' 
+                  : 'bg-[hsla(205,98%,16%,1)]'
               }`}>
                 <Check className="w-3 h-3 text-white" />
               </div>
