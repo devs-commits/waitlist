@@ -6,17 +6,18 @@ import wdcLogo from '../assets/wdc-logo.jpg';
 import actd_logo from '../assets/ACTD.png';
 
 interface NavbarDarkProps {
-  onChatClick?: () => void;
-  onJoinWaitlistClick?: () => void;
+  onJoinWaitlistClick?: () => void; 
 }
 
-const NavbarDark = ({ onChatClick, onJoinWaitlistClick }: NavbarDarkProps) => {
+const NavbarDark = ({ onJoinWaitlistClick}: NavbarDarkProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const navLinks = [
-    { label: 'Chat with Tolu', onClick: onChatClick },
-    { label: 'The Value', href: '#arsenal' },
-    { label: 'Get Sponsored', href: '#pricing' },
+    const navLinks = [
+    { label: 'Software Engineering Courses', href: '#courses' },
+    { label: 'Digital Marketing Courses', href: '#marketing' },
+    { label: 'Blog', href: '#blog' },
+    { label: 'Contact Us', href: '#contact'},
+    { label: 'About us', href: '#about' },
   ];
 
   return (
@@ -30,13 +31,12 @@ const NavbarDark = ({ onChatClick, onJoinWaitlistClick }: NavbarDarkProps) => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                onClick={link.onClick}
-                className="nav-link cursor-pointer"
+                className="text-xs font-medium text-foreground/80 hover:text-foreground transition-colors cursor-pointer"
               >
                 {link.label}
               </a>
@@ -74,10 +74,6 @@ const NavbarDark = ({ onChatClick, onJoinWaitlistClick }: NavbarDarkProps) => {
                 <a
                   key={link.label}
                   href={link.href}
-                  onClick={() => {
-                    link.onClick?.();
-                    setIsMobileMenuOpen(false);
-                  }}
                   className="nav-link py-2"
                 >
                   {link.label}
