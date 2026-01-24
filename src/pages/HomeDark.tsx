@@ -41,7 +41,6 @@ const HomeDark = () => {
       <div className='bg-four-corner bg-no-repeat bg-cover pb-10'>
         <NavbarDark 
         onJoinWaitlistClick={() => setIsWaitlistOpen(true)}
-        onChatClick={() => document.getElementById('chat')?.scrollIntoView({ behavior: 'smooth' })}
         />
         <HeroSectionDark 
         onSecureSpotClick={() => setIsWaitlistOpen(true)}
