@@ -101,7 +101,7 @@ const ChatInterface = ({ variant = 'dark', onTrialsExhausted }: ChatInterfacePro
     return (
       <div className="bg-white rounded-2xl overflow-hidden w-full shadow-xl">
         {/* Header */}
-        <div className="flex items-center justify-between p-4 bg-[#1a2744]">
+        <div className="flex items-center justify-between p-4 bg-[hsla(205,98%,16%,1)]">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-full overflow-hidden">
               <img 
@@ -114,11 +114,11 @@ const ChatInterface = ({ variant = 'dark', onTrialsExhausted }: ChatInterfacePro
               <h3 className="font-bold text-white text-base">Tolu (AI HR)</h3>
               <div className="flex items-center gap-1.5">
                 <div className="w-2 h-2 rounded-full bg-[#22c55e]" />
-                <p className="text-xs text-[#ff6b35] font-medium">Status: JUDGING YOU</p>
+                <p className="text-xs text-[hsla(135,59%,49%,1)] font-medium">Status: JUDGING YOU</p>
               </div>
             </div>
           </div>
-          <div className="bg-[#22c55e] text-white px-3 py-1 rounded text-xs font-bold">
+          <div className="bg-[hsla(359,100%,61%,0.46)] text-[hsla(359,100%,61%,1)]  px-3 py-1 rounded text-xs font-bold">
             {turnsLeft} TURNS LEFT
           </div>
         </div>

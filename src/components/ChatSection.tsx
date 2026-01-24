@@ -31,7 +31,7 @@ const ChatSectionV3 = ({ onTrialsExhausted }: ChatSectionV3Props) => {
           </h2>
           <p className="text-base text-[#4a5568] max-w-2xl mx-auto">
             Tolu is our AI HR Manager. She doesn't care about your "passion". She cares about output. You have exactly{' '}
-            <span className="text-[#22c55e] font-semibold">3 chances</span> to impress her before she blocks you.
+            <span className="text-[hsla(359,100%,61%,1)] font-semibold">3 chances</span> to impress her before she blocks you.
           </p>
         </motion.div>
 
