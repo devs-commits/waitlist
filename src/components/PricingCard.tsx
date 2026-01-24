@@ -54,7 +54,11 @@ const PricingCard = ({
         </div>
       )}
 
-      <div className="mb-6">
+      <div className={`mb-6 p-4 rounded-xl ${
+        isFeatured 
+          ? 'bg-[hsla(0,0%,100%,0.23)]' 
+          : 'bg-[hsla(0,0%,100%,0.41)]'
+      }`}>
         <h3 className={`font-semibold ${textSecondaryClass} mb-2 text-sm`}>{name}</h3>
         <div className="flex items-baseline gap-1">
           <span className={`text-3xl md:text-4xl font-bold ${textPrimaryClass}`}>₦{price}</span>
