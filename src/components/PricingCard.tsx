@@ -36,7 +36,6 @@ const PricingCard = ({
   const textPrimaryClass = isFeatured ? 'text-white' : 'text-[#1a2744]';
   const textSecondaryClass = isFeatured ? 'text-white/80' : 'text-[#1a2744]/70';
   const periodClass = isFeatured ? 'text-[hsla(244,100%,69%,1)]' : 'text-[hsla(244,100%,69%,1)]';
-  const checkClass = isFeatured ? 'text-violet-400' : 'text-violet-600';
 
   return (
     <motion.div
