@@ -31,12 +31,17 @@ const ChatInterface = ({ variant = 'dark', onSendMessage, onTrialsExhausted }: C
   const [isTyping, setIsTyping] = useState(false);
   const [turnsLeft, setTurnsLeft] = useState(3);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const isInitialRender = useRef(true);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   };
 
   useEffect(() => {
+    if (isInitialRender.current) {
+      isInitialRender.current = false;
+      return;
+    }
     scrollToBottom();
   }, [messages]);
 
@@ -94,9 +99,9 @@ const ChatInterface = ({ variant = 'dark', onSendMessage, onTrialsExhausted }: C
   // V3 design (exact match to reference)
   if (variant === 'v3') {
     return (
-      <div className="bg-white rounded-2xl overflow-hidden max-w-md w-full shadow-xl">
+      <div className="bg-white rounded-2xl overflow-hidden w-full shadow-xl">
         {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-gray-100">
+        <div className="flex items-center justify-between p-4 bg-[#1a2744]">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-full overflow-hidden">
               <img 
@@ -106,7 +111,7 @@ const ChatInterface = ({ variant = 'dark', onSendMessage, onTrialsExhausted }: C
               />
             </div>
             <div>
-              <h3 className="font-bold text-[#1a2744] text-base">Tolu (AI HR)</h3>
+              <h3 className="font-bold text-white text-base">Tolu (AI HR)</h3>
               <div className="flex items-center gap-1.5">
                 <div className="w-2 h-2 rounded-full bg-[#22c55e]" />
                 <p className="text-xs text-[#ff6b35] font-medium">Status: JUDGING YOU</p>

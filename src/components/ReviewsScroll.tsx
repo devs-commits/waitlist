@@ -51,22 +51,35 @@ const ReviewsScroll = ({ variant = 'dark' }: ReviewsScrollProps) => {
   // Duplicate reviews for seamless loop
   const duplicatedReviews = [...reviews, ...reviews];
 
-  // V3 design - only show first 3 reviews stacked
+  // V3 design - auto-scrolling reviews
   if (variant === 'v3') {
-    const displayReviews = reviews.slice(0, 3);
-    
     return (
-      <div className="flex flex-col gap-4 w-full max-w-md">
-        {displayReviews.map((review, index) => (
-          <ReviewCard
-            key={`${review.name}-${index}`}
-            name={review.name}
-            location={review.location}
-            content={review.content}
-            avatar={review.avatar}
-            variant="v3"
-          />
-        ))}
+      <div 
+        className="relative h-[400px] overflow-hidden w-full"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        {/* Gradient overlays */}
+        <div className="absolute top-0 left-0 right-0 h-12 z-10 pointer-events-none bg-gradient-to-b from-[#c8d3dc] to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-12 z-10 pointer-events-none bg-gradient-to-t from-[#c8d3dc] to-transparent" />
+
+        {/* Scrolling container */}
+        <div 
+          ref={scrollRef}
+          className={`flex flex-col space-y-4 ${isPaused ? '' : 'auto-scroll'}`}
+          style={{ paddingTop: '1rem', paddingBottom: '1rem' }}
+        >
+          {duplicatedReviews.map((review, index) => (
+            <ReviewCard
+              key={`${review.name}-${index}`}
+              name={review.name}
+              location={review.location}
+              content={review.content}
+              avatar={review.avatar}
+              variant="v3"
+            />
+          ))}
+        </div>
       </div>
     );
   }
