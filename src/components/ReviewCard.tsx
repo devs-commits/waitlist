@@ -10,7 +10,7 @@ const ReviewCard = ({ name, location, content, avatar, variant = 'dark' }: Revie
   // V3 design - dark navy cards with coral left border
   if (variant === 'v3') {
     return (
-      <div className="bg-[#1a2744] rounded-xl p-4 border-l-4 border-[#ff6b35]">
+      <div className="bg-[hsla(205,98%,16%,1)] rounded-xl p-4 border-l-4 border-[hsla(244,100%,69%,1)]">
         <div className="flex items-center gap-3 mb-3">
           {avatar ? (
             <img src={avatar} alt={name} className="w-10 h-10 rounded-full object-cover" />
@@ -20,7 +20,7 @@ const ReviewCard = ({ name, location, content, avatar, variant = 'dark' }: Revie
             </div>
           )}
           <div>
-            <p className="font-semibold text-[#ff6b35] text-sm">{name}</p>
+            <p className="font-semibold text-white text-sm">{name}</p>
           </div>
         </div>
         <p className="text-sm text-white/90 italic leading-relaxed">
