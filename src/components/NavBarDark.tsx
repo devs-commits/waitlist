@@ -45,7 +45,7 @@ const NavbarDark = ({ onJoinWaitlistClick}: NavbarDarkProps) => {
 
           {/* CTA Button */}
           <div className="hidden md:flex flex-shrink-0">
-            <a href="/" className="flex items-center">
+            <a href="https://www.actd.us/wildfusiondigitalcentre/" className="flex items-center">
               <img src={actd_logo} alt="ACTD Logo" className="h-[62.4px] w-[161px]" />
             </a>
           </div>
