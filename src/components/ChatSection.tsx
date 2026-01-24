@@ -9,13 +9,13 @@ interface ChatSectionV3Props {
 
 const ChatSectionV3 = ({ onTrialsExhausted }: ChatSectionV3Props) => {
   return (
-    <section className="py-16 md:py-24 bg-[#c8d3dc] relative overflow-hidden" id="chat-with-tolu">
+    <section className="py-8 md:py-12 bg-[hsla(205,98%,16%,0.42)] relative overflow-hidden" id="chat-with-tolu">
       {/* Background circle */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <img 
           src={chatBgCircle} 
           alt="" 
-          className="w-[900px] h-[900px] object-contain opacity-100"
+          className="w-full h-full object-contain opacity-100"
         />
       </div>
 
