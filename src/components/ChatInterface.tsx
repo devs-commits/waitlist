@@ -18,7 +18,7 @@ interface ChatInterfaceProps {
   onTrialsExhausted?: () => void;
 }
 
-const ChatInterface = ({ variant = 'dark', onSendMessage, onTrialsExhausted }: ChatInterfaceProps) => {
+const ChatInterface = ({ variant = 'dark', onTrialsExhausted }: ChatInterfaceProps) => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
