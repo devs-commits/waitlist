@@ -12,7 +12,7 @@ import SuccessModal from '../components/SuccessModal';
 // import FreeTasteTest from '../components/FreeTasteTest';
 // import HallOfFailures from '../components/HallOfFailures';
 // import PhysicalAnchor from '../components/PhysicalAnchor';
-import FloatingWhatsApp from '../components/FloatingWhatsapp';
+// import FloatingWhatsApp from '../components/FloatingWhatsapp';
 
 const HomeDark = () => {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
@@ -62,7 +62,7 @@ const HomeDark = () => {
       />
       <CTASectionDark onSecureSpotClick={() => setIsWaitlistOpen(true)} />
       <FooterDark />
-      <FloatingWhatsApp />
+      {/* <FloatingWhatsApp /> */}
 
       <WaitlistModal 
         isOpen={isWaitlistOpen} 
