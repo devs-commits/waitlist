@@ -15,9 +15,9 @@ const NavbarDark = ({ onJoinWaitlistClick}: NavbarDarkProps) => {
     const navLinks = [
     { label: 'Software Engineering Courses', href: '#courses' },
     { label: 'Digital Marketing Courses', href: '#marketing' },
-    { label: 'Blog', href: '#blog' },
-    { label: 'Contact Us', href: '#contact'},
-    { label: 'About us', href: '#about' },
+    { label: 'Blog', href: 'https://wdc.ng/blog/' },
+    { label: 'About us', href: 'https://wdc.ng/about-us/'},
+    { label: 'Contact us', href: 'https://wdc.ng/contact_us/' },
   ];
 
   return (
