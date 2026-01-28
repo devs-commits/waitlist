@@ -6,6 +6,7 @@ import { X, CheckCircle } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
+import {Checkbox } from "../components/ui/checkbox";
 
 interface WaitlistModalProps {
   isOpen: boolean;
@@ -24,6 +25,7 @@ const WaitlistModal = ({ isOpen, onClose, variant = 'dark' }: WaitlistModalProps
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [privacyAccepted, setPrivacyAccepted] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -47,6 +49,7 @@ const WaitlistModal = ({ isOpen, onClose, variant = 'dark' }: WaitlistModalProps
       setIsSubmitting(false);
       setShowSuccess(true);
       setFormData({ firstName: '', lastName: '', email: '', whatsapp: '', linkedin: '' });
+      setPrivacyAccepted(false);
       toast.success('Successfully joined the waitlist!');
 
       // Close modal after showing success message
@@ -202,14 +205,33 @@ const WaitlistModal = ({ isOpen, onClose, variant = 'dark' }: WaitlistModalProps
                       We verify every profile. no fakes allowed.
                     </p>
                   </div>
-
+                  <div className="flex items-start gap-3 mt-4">
+                <Checkbox
+                  id="privacy"
+                  checked={privacyAccepted}
+                  onCheckedChange={(checked) => setPrivacyAccepted(checked === true)}
+                  className="mt-0.5"
+                />
+                <Label htmlFor="privacy" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
+                  I have read and agree to the{' '}
+                  <a 
+                    href="https://wdc.ng/privacy-policy/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline font-medium"
+                  >
+                    Privacy Policy
+                  </a>
+                  <span className="text-coral"> *</span>
+                </Label>
+              </div>
                   <Button
                     type="submit"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || !privacyAccepted}
                     className={`w-full py-5 font-semibold mt-4 ${variant === 'dark'
                         ? 'btn-primary-gradient text-primary-foreground'
                         : 'bg-primary hover:bg-primary/90 text-primary-foreground'
-                      }`}
+                      } disabled:opacity-50 disabled:cursor-not-allowed`}
                   >
                     {isSubmitting ? 'Submitting...' : 'Join the Waitlist'}
                   </Button>
