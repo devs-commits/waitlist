@@ -179,24 +179,6 @@ const NavbarDark = ({ onJoinWaitlistClick}: NavbarDarkProps) => {
           </div>
         </div>
 
-
-
-
-
-
-          {/* Desktop Navigation */}
-          {/* <div className="hidden lg:flex items-center gap-6">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-xs font-medium text-foreground/80 hover:text-foreground transition-colors cursor-pointer"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div> */}
-
           {/* CTA Button */}
           <div className="hidden md:flex flex-shrink-0">
             <a href="https://www.actd.us/wildfusiondigitalcentre/" className="flex items-center">
@@ -216,7 +198,7 @@ const NavbarDark = ({ onJoinWaitlistClick}: NavbarDarkProps) => {
 
       {/* Desktop Mega Menu Dropdowns */}
       <AnimatePresence>
-        {activeDropdown && !isMobileMenuOpen && ( // Ensure desktop dropdown doesn't show on mobile
+        {activeDropdown && !isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
