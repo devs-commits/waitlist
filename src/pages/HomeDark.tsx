@@ -39,8 +39,7 @@ const HomeDark = () => {
   return (
     <div className="min-h-screen light-theme bg-[hsla(220,13%,95%,1)]">
       <div className='bg-four-corner bg-no-repeat bg-cover pb-10'>
-        <NavbarDark 
-        onJoinWaitlistClick={() => setIsWaitlistOpen(true)}
+        <NavbarDark
         />
         <HeroSectionDark 
         onSecureSpotClick={() => setIsWaitlistOpen(true)}

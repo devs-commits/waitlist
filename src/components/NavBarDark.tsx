@@ -1,13 +1,8 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Brain, BarChart3, Shield, Palette, Bug, MonitorCheck, Coins, GraduationCap, Calendar, Search } from 'lucide-react';
-import { Button } from '../components/ui/button';
 import wdcLogo from '../assets/wdc-logo.jpg';
 import actd_logo from '../assets/ACTD.png';
-
-interface NavbarDarkProps {
-  onJoinWaitlistClick?: () => void; 
-}
 
 interface CourseItem {
   icon: React.ReactNode;
@@ -17,7 +12,7 @@ interface CourseItem {
   comingSoon?: boolean;
 }
 
-const NavbarDark = ({ onJoinWaitlistClick}: NavbarDarkProps) => {
+const NavbarDark = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
