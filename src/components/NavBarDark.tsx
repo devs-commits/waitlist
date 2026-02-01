@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown, Brain, BarChart3, Shield, Palette, Bug, MonitorCheck, Coins, GraduationCap, Calendar, Search } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import wdcLogo from '../assets/wdc-logo.jpg';
 import actd_logo from '../assets/ACTD.png';
