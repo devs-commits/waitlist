@@ -186,7 +186,7 @@ const SponsorModal = ({ isOpen, onClose, planName = 'The Career Accelerator', va
                   <Button 
                     onClick={handleCopyLink}
                     variant="outline"
-                    className="py-5 font-medium border-border"
+                    className="py-5 font-medium border-border text-foreground"
                   >
                     {copied ? <Check className="w-4 h-4 mr-2" /> : <Copy className="w-4 h-4 mr-2" />}
                     {copied ? 'Copied!' : 'Copy Link'}
