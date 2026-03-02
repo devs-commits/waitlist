@@ -111,7 +111,7 @@ const SponsorModal = ({ isOpen, onClose, planName = 'The Career Accelerator', va
                     value={formData.yourName}
                     onChange={(e) => setFormData({ ...formData, yourName: e.target.value })}
                     required
-                    className="pl-10 bg-secondary border-border"
+                    className="pl-10 bg-secondary border-border text-foreground"
                   />
                 </div>
 
@@ -123,7 +123,7 @@ const SponsorModal = ({ isOpen, onClose, planName = 'The Career Accelerator', va
                     value={formData.yourEmail}
                     onChange={(e) => setFormData({ ...formData, yourEmail: e.target.value })}
                     required
-                    className="pl-10 bg-secondary border-border"
+                    className="pl-10 bg-secondary border-border text-foreground"
                   />
                 </div>
 
@@ -138,7 +138,7 @@ const SponsorModal = ({ isOpen, onClose, planName = 'The Career Accelerator', va
                         value={formData.sponsorName}
                         onChange={(e) => setFormData({ ...formData, sponsorName: e.target.value })}
                         required
-                        className="pl-10 bg-secondary border-border"
+                        className="pl-10 bg-secondary border-border text-foreground"
                       />
                     </div>
 
@@ -150,7 +150,7 @@ const SponsorModal = ({ isOpen, onClose, planName = 'The Career Accelerator', va
                         value={formData.sponsorEmail}
                         onChange={(e) => setFormData({ ...formData, sponsorEmail: e.target.value })}
                         required
-                        className="pl-10 bg-secondary border-border"
+                        className="pl-10 bg-secondary border-border text-foreground"
                       />
                     </div>
 
@@ -158,7 +158,7 @@ const SponsorModal = ({ isOpen, onClose, planName = 'The Career Accelerator', va
                       placeholder="Personal message (optional)"
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="bg-secondary border-border resize-none"
+                      className="bg-secondary border-border resize-none text-foreground"
                       rows={3}
                     />
                   </div>
