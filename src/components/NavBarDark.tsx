@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Brain, BarChart3, Shield, Palette, Bug, MonitorCheck, Coins, GraduationCap, Calendar, Search } from 'lucide-react';
+// import { motion, AnimatePresence } from 'framer-motion';
+import { Brain, BarChart3, Shield, Palette, Bug, MonitorCheck, Coins, GraduationCap, Calendar, Search } from 'lucide-react';
 import wdcLogo from '../assets/wdc-logo.jpg';
 import actd_logo from '../assets/ACTD.png';
 
@@ -13,75 +13,75 @@ interface CourseItem {
 }
 
 const NavbarDark = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  // const [setActiveDropdown] = useState<string | null>(null);
 
-  const softwareEngineeringCourses: CourseItem[] = [
-    {
-      icon: <Brain className="w-6 h-6 text-[#4A90A4]" />,
-      title: 'Artificial Intelligence',
-      description: 'Understand the future of work with our 6 weeks Artificial Intelligence Program',
-      href: 'https://wdc.ng/artificial-intelligence-for-marketers/',
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6 text-[#4A90A4]" />,
-      title: 'Data Analytics',
-      description: 'Explore the exciting world of data with our Data Analytics Program for Beginners',
-      href: 'https://wdc.ng/data-analytics/',
-    },
-    {
-      icon: <Shield className="w-6 h-6 text-[#4A90A4]" />,
-      title: 'Cybersecurity',
-      description: 'Get started in a rewarding Cybersecurity career with our Cybersecurity Training Program',
-      href: 'https://wdc.ng/cybersecurity/',
-    },
-    {
-      icon: <Palette className="w-6 h-6 text-[#4A90A4]" />,
-      title: 'Product Design',
-      description: 'Become a certified Product Designer in 8 weeks',
-      href: 'https://wdc.ng/product-design/',
-    },
-    {
-      icon: <Bug className="w-6 h-6 text-[#4A90A4]" />,
-      title: 'Ethical Hacking',
-      description: 'Join our Advanced Ethical Hacking Training Program and master the skills top companies are looking for.',
-      href: 'https://wdc.ng/ethical-hacking/',
-    },
-    {
-      icon: <MonitorCheck className="w-6 h-6 text-[#4A90A4]" />,
-      title: 'Certified SOC Analyst (CSA)',
-      description: 'Coming Soon',
-      href: '#soc-analyst',
-      comingSoon: true,
-    },
-    {
-      icon: <Coins className="w-6 h-6 text-[#4A90A4]" />,
-      title: 'Blockchain Finance Certification (BFC)',
-      description: 'Coming Soon',
-      href: '#blockchain-finance',
-      comingSoon: true,
-    },
-  ];
-  const digitalMarketingCourses: CourseItem[] = [
-    {
-      icon: <GraduationCap className="w-6 h-6 text-[#4A90A4]" />,
-      title: 'Digital Internship Programme',
-      description: 'Our Digital Internship Programme (DIP) is a seven-week intensive digital training program.',
-      href: 'https://wdc.ng/digital-internship-program/',
-    },
-    {
-      icon: <Search className="w-6 h-6 text-[#4A90A4]" />,
-      title: 'SEO & Paid Media Training',
-      description: 'Master the art of driving traffic and boosting conversions with our specialized training in Paid Media and SEO',
-      href: 'https://wdc.ng/seo-paid-media-training/',
-    },
-    {
-      icon: <Calendar className="w-6 h-6 text-[#4A90A4]" />,
-      title: 'Digital Marketing Weekend',
-      description: 'Become Certified in Digital Marketing in 8 weekends even if you have a 9-5.',
-      href: 'https://wdc.ng/digital-marketing-weekend/',
-    },
-  ];
+  // const softwareEngineeringCourses: CourseItem[] = [
+  //   {
+  //     icon: <Brain className="w-6 h-6 text-[#4A90A4]" />,
+  //     title: 'Artificial Intelligence',
+  //     description: 'Understand the future of work with our 6 weeks Artificial Intelligence Program',
+  //     href: 'https://wdc.ng/artificial-intelligence-for-marketers/',
+  //   },
+  //   {
+  //     icon: <BarChart3 className="w-6 h-6 text-[#4A90A4]" />,
+  //     title: 'Data Analytics',
+  //     description: 'Explore the exciting world of data with our Data Analytics Program for Beginners',
+  //     href: 'https://wdc.ng/data-analytics/',
+  //   },
+  //   {
+  //     icon: <Shield className="w-6 h-6 text-[#4A90A4]" />,
+  //     title: 'Cybersecurity',
+  //     description: 'Get started in a rewarding Cybersecurity career with our Cybersecurity Training Program',
+  //     href: 'https://wdc.ng/cybersecurity/',
+  //   },
+  //   {
+  //     icon: <Palette className="w-6 h-6 text-[#4A90A4]" />,
+  //     title: 'Product Design',
+  //     description: 'Become a certified Product Designer in 8 weeks',
+  //     href: 'https://wdc.ng/product-design/',
+  //   },
+  //   {
+  //     icon: <Bug className="w-6 h-6 text-[#4A90A4]" />,
+  //     title: 'Ethical Hacking',
+  //     description: 'Join our Advanced Ethical Hacking Training Program and master the skills top companies are looking for.',
+  //     href: 'https://wdc.ng/ethical-hacking/',
+  //   },
+  //   {
+  //     icon: <MonitorCheck className="w-6 h-6 text-[#4A90A4]" />,
+  //     title: 'Certified SOC Analyst (CSA)',
+  //     description: 'Coming Soon',
+  //     href: '#soc-analyst',
+  //     comingSoon: true,
+  //   },
+  //   {
+  //     icon: <Coins className="w-6 h-6 text-[#4A90A4]" />,
+  //     title: 'Blockchain Finance Certification (BFC)',
+  //     description: 'Coming Soon',
+  //     href: '#blockchain-finance',
+  //     comingSoon: true,
+  //   },
+  // ];
+  // const digitalMarketingCourses: CourseItem[] = [
+  //   {
+  //     icon: <GraduationCap className="w-6 h-6 text-[#4A90A4]" />,
+  //     title: 'Digital Internship Programme',
+  //     description: 'Our Digital Internship Programme (DIP) is a seven-week intensive digital training program.',
+  //     href: 'https://wdc.ng/digital-internship-program/',
+  //   },
+  //   {
+  //     icon: <Search className="w-6 h-6 text-[#4A90A4]" />,
+  //     title: 'SEO & Paid Media Training',
+  //     description: 'Master the art of driving traffic and boosting conversions with our specialized training in Paid Media and SEO',
+  //     href: 'https://wdc.ng/seo-paid-media-training/',
+  //   },
+  //   {
+  //     icon: <Calendar className="w-6 h-6 text-[#4A90A4]" />,
+  //     title: 'Digital Marketing Weekend',
+  //     description: 'Become Certified in Digital Marketing in 8 weekends even if you have a 9-5.',
+  //     href: 'https://wdc.ng/digital-marketing-weekend/',
+  //   },
+  // ];
 
   // const navLinks = [
   //   { label: 'Software Engineering Courses', dropdownKey: 'software' },
@@ -91,42 +91,42 @@ const NavbarDark = () => {
   //   { label: 'Contact us', href: 'https://wdc.ng/contact_us/' },
   // ];
 
-  const handleMouseEnter = (key: string) => {
-    setActiveDropdown(key);
-  };
+  // const handleMouseEnter = (key: string) => {
+  //   setActiveDropdown(key);
+  // };
 
-  const handleMouseLeave = () => {
-    setActiveDropdown(null);
-  };
-  const renderCourseCard = (course: CourseItem) => (
-    <a
-      key={course.title}
-      href={course.href}
-      className="flex items-start gap-4 p-4 rounded-xl border border-[#E5EEF2] bg-gradient-to-br from-white to-[#F8FBFC] hover:border-[#4A90A4]/30 hover:shadow-md transition-all duration-200 group"
-    >
-      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#E8F4F8] flex items-center justify-center border border-[#D0E8EF]">
-        {course.icon}
-      </div>
-      <div className="flex-1 min-w-0">
-        <h4 className="font-semibold text-[#1A3A4A] group-hover:text-[#4A90A4] transition-colors text-sm leading-tight">
-          {course.title}
-        </h4>
-        <p className="text-xs text-gray-500 mt-1 leading-relaxed">
-          {course.description}
-        </p>
-      </div>
-    </a>
-  );
-  const getDropdownCourses = (key: string) => {
-    if (key === 'software') return softwareEngineeringCourses;
-    if (key === 'digital') return digitalMarketingCourses;
-    return [];
-  };
-  const getDropdownColumns = (key: string) => {
-    if (key === 'software') return 'grid-cols-3';
-    if (key === 'digital') return 'grid-cols-3';
-    return 'grid-cols-1';
-  };
+  // const handleMouseLeave = () => {
+  //   setActiveDropdown(null);
+  // };
+  // const renderCourseCard = (course: CourseItem) => (
+  //   <a
+  //     key={course.title}
+  //     href={course.href}
+  //     className="flex items-start gap-4 p-4 rounded-xl border border-[#E5EEF2] bg-gradient-to-br from-white to-[#F8FBFC] hover:border-[#4A90A4]/30 hover:shadow-md transition-all duration-200 group"
+  //   >
+  //     <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#E8F4F8] flex items-center justify-center border border-[#D0E8EF]">
+  //       {course.icon}
+  //     </div>
+  //     <div className="flex-1 min-w-0">
+  //       <h4 className="font-semibold text-[#1A3A4A] group-hover:text-[#4A90A4] transition-colors text-sm leading-tight">
+  //         {course.title}
+  //       </h4>
+  //       <p className="text-xs text-gray-500 mt-1 leading-relaxed">
+  //         {course.description}
+  //       </p>
+  //     </div>
+  //   </a>
+  // );
+  // const getDropdownCourses = (key: string) => {
+  //   if (key === 'software') return softwareEngineeringCourses;
+  //   if (key === 'digital') return digitalMarketingCourses;
+  //   return [];
+  // };
+  // const getDropdownColumns = (key: string) => {
+  //   if (key === 'software') return 'grid-cols-3';
+  //   if (key === 'digital') return 'grid-cols-3';
+  //   return 'grid-cols-1';
+  // };
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-border bg-[hsla(207,36%,95%,1)]">
