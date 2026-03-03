@@ -192,7 +192,7 @@ const NavbarDark = () => {
       </div>
 
       {/* Desktop Mega Menu Dropdowns */}
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {activeDropdown && !isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
@@ -210,7 +210,7 @@ const NavbarDark = () => {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       {/* Mobile Menu
       <AnimatePresence>
