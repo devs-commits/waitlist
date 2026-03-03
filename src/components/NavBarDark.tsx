@@ -83,13 +83,13 @@ const NavbarDark = () => {
     },
   ];
 
-  const navLinks = [
-    { label: 'Software Engineering Courses', dropdownKey: 'software' },
-    { label: 'Digital Marketing Courses', dropdownKey: 'digital' },
-    { label: 'Blog', href: 'https://wdc.ng/blog/' },
-    { label: 'About us', href: 'https://wdc.ng/about-us/'},
-    { label: 'Contact us', href: 'https://wdc.ng/contact_us/' },
-  ];
+  // const navLinks = [
+  //   { label: 'Software Engineering Courses', dropdownKey: 'software' },
+  //   { label: 'Digital Marketing Courses', dropdownKey: 'digital' },
+  //   { label: 'Blog', href: 'https://wdc.ng/blog/' },
+  //   { label: 'About us', href: 'https://wdc.ng/about-us/'},
+  //   { label: 'Contact us', href: 'https://wdc.ng/contact_us/' },
+  // ];
 
   const handleMouseEnter = (key: string) => {
     setActiveDropdown(key);
@@ -142,7 +142,7 @@ const NavbarDark = () => {
 
           <div className="flex h-16 items-center justify-between">
           {/* Desktop Navigation - Centered */}
-          <div className="hidden lg:flex items-center justify-center flex-1">
+          {/* <div className="hidden lg:flex items-center justify-center flex-1">
             <div className="flex items-center gap-1">
               {navLinks.map((link) => (
                 <div
@@ -171,7 +171,7 @@ const NavbarDark = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
 
           {/* CTA Button */}
@@ -182,12 +182,12 @@ const NavbarDark = () => {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <button
+          {/* <button
             className="md:hidden p-2 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          </button> */}
         </div>
       </div>
 
@@ -212,7 +212,7 @@ const NavbarDark = () => {
         )}
       </AnimatePresence>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -274,7 +274,7 @@ const NavbarDark = () => {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </nav>
   );
 };
