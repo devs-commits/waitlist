@@ -1,16 +1,16 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 // import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, BarChart3, Shield, Palette, Bug, MonitorCheck, Coins, GraduationCap, Calendar, Search } from 'lucide-react';
+// import { Brain, BarChart3, Shield, Palette, Bug, MonitorCheck, Coins, GraduationCap, Calendar, Search } from 'lucide-react';
 import wdcLogo from '../assets/wdc-logo.jpg';
 import actd_logo from '../assets/ACTD.png';
 
-interface CourseItem {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  href: string;
-  comingSoon?: boolean;
-}
+// interface CourseItem {
+//   icon: React.ReactNode;
+//   title: string;
+//   description: string;
+//   href: string;
+//   comingSoon?: boolean;
+// }
 
 const NavbarDark = () => {
   // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
