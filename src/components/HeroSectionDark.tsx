@@ -10,7 +10,7 @@ interface HeroSectionDarkProps {
 }
 
 const HeroSectionDark = ({ onSecureSpotClick, onMentorPayClick }: HeroSectionDarkProps) => {
-  const targetDate = new Date('2026-03-07T00:00:00');
+  const targetDate = new Date('2026-03-09T00:00:00');
 
   return (
     <section className="flex flex-col border border-border mx-auto rounded-3xl shadow-lg overflow-hidden my-10 justify-center px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -46,7 +46,7 @@ const HeroSectionDark = ({ onSecureSpotClick, onMentorPayClick }: HeroSectionDar
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
                 <p className="text-xs md:text-sm text-purple-500 font-semibold tracking-wider mb-4">
-                  LAUNCH DEADLINE: MAR 07, 2026
+                  LAUNCH DEADLINE: MAR 09, 2026
                 </p>
                 <div className="flex justify-center">
                   <CountdownTimer targetDate={targetDate} variant="light" />
