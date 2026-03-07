@@ -27,43 +27,115 @@ const WaitlistModal = ({ isOpen, onClose, variant = 'dark' }: WaitlistModalProps
   const [showSuccess, setShowSuccess] = useState(false);
   const [privacyAccepted, setPrivacyAccepted] = useState(false)
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
 
-    try {
-      const { error } = await supabase
-        .from('waitlist')
-        .insert([
-          {
-            first_name: formData.firstName,
-            last_name: formData.lastName,
-            email: formData.email,
-            whatsapp: formData.whatsapp,
-            linkedin: formData.linkedin,
-          },
-        ]);
+  //   try {
+  //     const { error } = await supabase
+  //       .from('waitlist')
+  //       .insert([
+  //         {
+  //           first_name: formData.firstName,
+  //           last_name: formData.lastName,
+  //           email: formData.email,
+  //           whatsapp: formData.whatsapp,
+  //           linkedin: formData.linkedin,
+  //         },
+  //       ]);
 
-      if (error) throw error;
+  //     if (error) throw error;
+      
+  //     await fetch(
+  //       `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/add-subscriber`,
+  //       {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify({
+  //           email: formData.email,
+  //           firstName: formData.firstName,
+  //           lastName: formData.lastName,
+  //           whatsapp: formData.whatsapp,
+  //           linkedin: formData.linkedin,
+  //         }),
+  //       }
+  //     );
 
-      setIsSubmitting(false);
-      setShowSuccess(true);
-      setFormData({ firstName: '', lastName: '', email: '', whatsapp: '', linkedin: '' });
-      setPrivacyAccepted(false);
-      toast.success('Successfully joined the waitlist!');
+  //     setIsSubmitting(false);
+  //     setShowSuccess(true);
+  //     setFormData({ firstName: '', lastName: '', email: '', whatsapp: '', linkedin: '' });
+  //     setPrivacyAccepted(false);
+  //     toast.success('Successfully joined the waitlist!');
 
-      // Close modal after showing success message
-      setTimeout(() => {
-        setShowSuccess(false);
-        onClose();
-      }, 2500);
+  //     // Close modal after showing success message
+  //     setTimeout(() => {
+  //       setShowSuccess(false);
+  //       onClose();
+  //     }, 2500);
 
-    } catch (error) {
-      console.error('Error submitting to waitlist:', error);
-      toast.error('Failed to join waitlist. Please try again.');
-      setIsSubmitting(false);
-    }
-  };
+  //   } catch (error) {
+  //     console.error('Error submitting to waitlist:', error);
+  //     toast.error('Failed to join waitlist. Please try again.');
+  //     setIsSubmitting(false);
+  //   }
+  // };
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  try {
+    // Save to database
+    const { error } = await supabase.from("waitlist").insert([
+      {
+        first_name: formData.firstName,
+        last_name: formData.lastName,
+        email: formData.email,
+        whatsapp: formData.whatsapp,
+        linkedin: formData.linkedin,
+      },
+    ]);
+
+    if (error) throw error;
+
+    // Send to MailerLite via edge function
+    await fetch(
+      `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/add-subscriber`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    );
+
+    toast.success("Successfully joined the waitlist!");
+
+    setShowSuccess(true);
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      whatsapp: "",
+      linkedin: "",
+    });
+    setPrivacyAccepted(false);
+
+    setTimeout(() => {
+      setShowSuccess(false);
+      onClose();
+    }, 2500);
+
+  } catch (error) {
+    console.error(error);
+    toast.error("Failed to join waitlist. Please try again.");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   const overlayClass = variant === 'dark'
     ? 'bg-background/80'
