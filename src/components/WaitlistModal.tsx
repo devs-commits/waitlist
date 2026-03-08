@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { supabase } from '../lib/supabase';
+// import { supabase } from '../lib/supabase';
 import { toast } from 'sonner';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, CheckCircle } from 'lucide-react';
@@ -87,21 +87,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   setIsSubmitting(true);
 
   try {
-    // Save to database
-    const { error } = await supabase.from("waitlist").insert([
-      {
-        first_name: formData.firstName,
-        last_name: formData.lastName,
-        email: formData.email,
-        whatsapp: formData.whatsapp,
-        linkedin: formData.linkedin,
-      },
-    ]);
-
-    if (error) throw error;
-
-    // Send to MailerLite via edge function
-    await fetch(
+    const response = await fetch(
       `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/add-subscriber`,
       {
         method: "POST",
@@ -111,6 +97,10 @@ const handleSubmit = async (e: React.FormEvent) => {
         body: JSON.stringify(formData),
       }
     );
+
+    if (!response.ok) {
+      throw new Error("Failed to join waitlist");
+    }
 
     toast.success("Successfully joined the waitlist!");
 
@@ -122,7 +112,6 @@ const handleSubmit = async (e: React.FormEvent) => {
       whatsapp: "",
       linkedin: "",
     });
-    setPrivacyAccepted(false);
 
     setTimeout(() => {
       setShowSuccess(false);
@@ -131,7 +120,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 
   } catch (error) {
     console.error(error);
-    toast.error("Failed to join waitlist. Please try again.");
+    toast.error("Failed to join waitlist.");
   } finally {
     setIsSubmitting(false);
   }
