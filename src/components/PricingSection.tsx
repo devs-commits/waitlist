@@ -26,9 +26,15 @@ const plans = [
     price: '45,000',
     period: '/ 3 MONTHS BUNDLE',
     features: [
-      'Guaranteed Recommendation Letter',
-      'Full Career Portfolio',
-      'Priority Review by Sola (Supervisor)',
+      // 'Guaranteed Recommendation Letter',
+      // 'Full Career Portfolio',
+      // 'Priority Review by Sola (Supervisor)',
+      'AI Project Manager',
+      'AI Career Coach',
+      'Verified Recommendation Letter',
+      'LinkedIn Portfolio Optimization',
+      'Priority Job Referrals'
+
     ],
     isFeatured: true,
   },
