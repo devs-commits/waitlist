@@ -49,7 +49,10 @@ const HomeDark = () => {
       <ArsenalSection  />
       {/* <FreeTasteTest /> */}
       <div id="chat">
-        <ChatSectionDark onTrialsExhausted={() => setIsWaitlistOpen(true)} />
+        <ChatSectionDark 
+          onTrialsExhausted={() => setIsWaitlistOpen(true)}
+          onJoinClick={() => setIsWaitlistOpen(true)}
+        />
       </div>
       {/* <HallOfFailures /> */}
       {/* <PhysicalAnchor /> */}

@@ -2,12 +2,14 @@ import { motion } from 'framer-motion';
 import ChatInterface from './ChatInterface';
 import ReviewsScroll from './ReviewsScroll';
 import chatBgCircle from './../assets/circle.png';
+import { Button } from '../components/ui/button';
 
 interface ChatSectionV3Props {
   onTrialsExhausted?: () => void;
+  onJoinClick?: () => void;
 }
 
-const ChatSectionV3 = ({ onTrialsExhausted }: ChatSectionV3Props) => {
+const ChatSectionV3 = ({ onTrialsExhausted, onJoinClick }: ChatSectionV3Props) => {
   return (
     <section className="max-w-7xl mx-auto py-8 md:py-12 bg-[hsla(205,98%,16%,0.42)] relative overflow-hidden" id="chat-with-tolu">
       {/* Background circle */}
@@ -28,12 +30,26 @@ const ChatSectionV3 = ({ onTrialsExhausted }: ChatSectionV3Props) => {
         >
           <h2 className="text-2xl md:text-4xl font-bold text-[#1a2744] mb-4">
             Meet Tolu. <span className="text-[#ff6b35]">The HR Manager Who Rejects 99% of CVs.
-</span>
+          </span>
           </h2>
           <p className="text-base text-[#4a5568] max-w-2xl mx-auto">
            Tolu scans your profile. If your CV is empty, she will reject you. WDC Labs trains you to pass her test.
             {/* <span className="text-[hsla(359,100%,61%,1)] font-semibold">3 chances</span> to impress her before she blocks you. */}
           </p>
+          <p className="text-xs md:text-sm text-purple-500 font-semibold tracking-wider my-4">
+            Think you can impress Tolu?
+          </p>
+          {onJoinClick && (
+            <div className="mt-4">
+              <Button
+                onClick={onJoinClick}
+                variant="ghost"
+                className="text-white px-6 py-3 text-base font-semibold"
+              >
+                Join WDC Labs
+              </Button>
+            </div>
+          )}
         </motion.div>
 
         <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-8 lg:gap-12 max-w-5xl mx-auto">
