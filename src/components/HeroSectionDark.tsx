@@ -27,7 +27,7 @@ const HeroSectionDark = ({ onSecureSpotClick, onMentorPayClick }: HeroSectionDar
               >
                 Turn ₦15,000 Into 1 Year of Work Experience
                 <br />
-                <span className="text-3xl text-purple-500">Secure Your Future Now.</span>
+                <span className="text-3xl text-purple-500">Stop getting rejected for “no experience.”</span>
               </motion.h1>
 
               <motion.p 
