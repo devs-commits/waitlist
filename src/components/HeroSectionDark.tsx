@@ -25,7 +25,7 @@ const HeroSectionDark = ({ onSecureSpotClick, onMentorPayClick }: HeroSectionDar
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                Experience is the New Currency.
+                Turn ₦15,000 Into 1 Year of Work Experience
                 <br />
                 <span className="text-3xl text-purple-500">Secure Your Future Now.</span>
               </motion.h1>
@@ -36,7 +36,7 @@ const HeroSectionDark = ({ onSecureSpotClick, onMentorPayClick }: HeroSectionDar
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
               >
-                By 2026, "Entry Level" jobs will require 2 years of experience. <span className="font-bold text-black">WDC Labs</span> gives you that experience in 3 months. Don't gamble with your career. Get the cheat code.
+                WDC Labs puts you inside a virtual tech office where you complete real tasks, build a portfolio, and graduate with proof of work. 
               </motion.p>
 
               <motion.div
@@ -46,7 +46,7 @@ const HeroSectionDark = ({ onSecureSpotClick, onMentorPayClick }: HeroSectionDar
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
                 <p className="text-xs md:text-sm text-purple-500 font-semibold tracking-wider mb-4">
-                  LAUNCH DEADLINE: MAR 09, 2026
+                  LAUNCH DEADLINE: MAR 16, 2026
                 </p>
                 <div className="flex justify-center">
                   <CountdownTimer targetDate={targetDate} variant="light" />
@@ -77,14 +77,14 @@ const HeroSectionDark = ({ onSecureSpotClick, onMentorPayClick }: HeroSectionDar
                 </Button>
               </motion.div>
 
-              <motion.p 
+              {/* <motion.p 
                 className="text-xs text-black"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
                 No credit card required for waitlist. Verify via LinkedIn.
-              </motion.p>
+              </motion.p> */}
             </div>
           </div>
         </div>
