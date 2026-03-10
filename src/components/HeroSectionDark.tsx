@@ -10,7 +10,7 @@ interface HeroSectionDarkProps {
 }
 
 const HeroSectionDark = ({ onSecureSpotClick, onMentorPayClick }: HeroSectionDarkProps) => {
-  const targetDate = new Date('2026-03-09T00:00:00');
+  const targetDate = new Date('2026-03-16T00:00:00');
 
   return (
     <section className="flex flex-col border border-border mx-auto rounded-3xl shadow-lg overflow-hidden my-10 justify-center px-4 sm:px-6 lg:px-8 max-w-7xl">
