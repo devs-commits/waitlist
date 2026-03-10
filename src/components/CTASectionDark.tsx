@@ -32,16 +32,25 @@ const CTASectionDark = ({ onSecureSpotClick }: CTASectionDarkProps) => {
             className="text-center lg:text-left"
           >
             <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
-              Don't be left behind in 2026.
+              In 2026 Degrees Are Not Enough
             </h2>
+            <p className="text-sm text-muted-foreground mb-2">
+              Employers want experience.
+            </p>
+            <p className="text-sm text-muted-foreground mb-2">
+              WDC Labs gives you that experience.
+            </p>
+            <p className="text-sm text-muted-foreground mb-2">
+              For ₦15,000.
+            </p>
             <p className="text-sm text-muted-foreground mb-6">
-              Can't afford the subscription? Don't let that stop you. Send a sponsorship link to a mentor.
+              Secure your desk in the Virtual Office before the batch closes.
             </p>
             <Button 
               onClick={onSecureSpotClick}
               className="bg-[hsla(205,98%,16%,1)] text-white px-8 py-6 text-base font-semibold"
             >
-              Secure your spot now
+              Secure My Spot
             </Button>
           </motion.div>
         </div>
