@@ -27,11 +27,12 @@ const ChatSectionV3 = ({ onTrialsExhausted }: ChatSectionV3Props) => {
           viewport={{ once: true }}
         >
           <h2 className="text-2xl md:text-4xl font-bold text-[#1a2744] mb-4">
-            Meet Tolu. <span className="text-[#ff6b35]">Your Nightmare.</span>
+            Meet Tolu. <span className="text-[#ff6b35]">The HR Manager Who Rejects 99% of CVs.
+</span>
           </h2>
           <p className="text-base text-[#4a5568] max-w-2xl mx-auto">
-            Tolu is our AI HR Manager. She doesn't care about your "passion". She cares about output. You have exactly{' '}
-            <span className="text-[hsla(359,100%,61%,1)] font-semibold">3 chances</span> to impress her before she blocks you.
+           Tolu scans your profile. If your CV is empty, she will reject you. WDC Labs trains you to pass her test.
+            {/* <span className="text-[hsla(359,100%,61%,1)] font-semibold">3 chances</span> to impress her before she blocks you. */}
           </p>
         </motion.div>
 
