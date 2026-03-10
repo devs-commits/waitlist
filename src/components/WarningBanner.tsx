@@ -10,8 +10,17 @@ const WarningBanner = ({ spotsLeft = 124, batch = "JAN BATCH" }: WarningBannerPr
     <motion.div 
       className="warning-banner p-2 px-2 text-center justify-center mx-auto border rounded-2xl border-red-500 max-w-md"
       initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      animate={{
+        opacity: 1,
+        y: [0, -5, 0],
+        scale: [1, 1.05, 1],
+      }}
+      transition={{
+        duration: 1.2,
+        repeat: Infinity,
+        repeatType: 'mirror',
+        ease: 'easeInOut',
+      }}
     >
       <p className="text-xs md:text-sm font-semibold text-background tracking-wide">
         ⚠️ WARNING: ONLY {spotsLeft} SPOTS LEFT FOR {batch}

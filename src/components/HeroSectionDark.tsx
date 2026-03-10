@@ -42,8 +42,12 @@ const HeroSectionDark = ({ onSecureSpotClick, onMentorPayClick }: HeroSectionDar
               <motion.div
                 className="mb-6"
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                animate={{
+                  opacity: 1,
+                  y: [0, -4, 0],
+                  scale: [1, 1.02, 1],
+                }}
+                transition={{ duration: 1.2, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut', delay: 0.2 }}
               >
                 <p className="text-xs md:text-sm text-purple-500 font-semibold tracking-wider mb-4">
                   LAUNCH DEADLINE: MAR 16, 2026
