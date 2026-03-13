@@ -137,7 +137,7 @@ const ChatInterface = ({ variant = 'v3' }: ChatInterfaceProps) => {
 
           <div className="h-64 overflow-y-auto p-4 space-y-4 bg-white">
             <AnimatePresence>
-              {messages.map((message, index) => (
+              {messages.map((message) => (
                 <motion.div
                   key={message.id}
                   initial={{ opacity: 0, y: 10 }}
