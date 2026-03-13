@@ -50,7 +50,6 @@ const HomeDark = () => {
       {/* <FreeTasteTest /> */}
       <div id="chat">
         <ChatSectionDark 
-          onTrialsExhausted={() => setIsWaitlistOpen(true)}
           onJoinClick={() => setIsWaitlistOpen(true)}
         />
       </div>
