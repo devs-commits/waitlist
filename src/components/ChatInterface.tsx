@@ -51,7 +51,7 @@ const ChatInterface = ({ variant = 'v3' }: ChatInterfaceProps) => {
 
   const renderLines = (text: string) =>
     text.split('\n').map((line, idx) => (
-      <p key={idx} className="text-sm text-[#1a2744] mb-1">
+      <p key={idx} className="text-sm text-[#1a2744] mb-1 font-inter">
         {line}
       </p>
     ));
@@ -116,11 +116,11 @@ const ChatInterface = ({ variant = 'v3' }: ChatInterfaceProps) => {
                   />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold text-white/80">Tolu HR Screening</p>
-                  <h3 className="text-lg font-bold text-white">Step {step} of 3</h3>
+                  <p className="text-xs font-semibold text-white/80 font-inter">Tolu HR Screening</p>
+                  <h3 className="text-lg font-bold text-white font-inter">Step {step} of 3</h3>
                 </div>
               </div>
-              <div className="text-xs font-semibold text-white/80">{progressLabel}</div>
+              <div className="text-xs font-semibold text-white/80 font-inter">{progressLabel}</div>
             </div>
             <div className="mt-3 h-2 w-full rounded-full bg-white/20">
               <div
@@ -131,8 +131,8 @@ const ChatInterface = ({ variant = 'v3' }: ChatInterfaceProps) => {
           </div>
 
           <div className="p-4 border-b border-white/10">
-            <h4 className="text-sm font-semibold text-[#1a2744]">Can You Pass Tolu's HR Screening?</h4>
-            <p className="text-xs text-[#475569] mt-1">Most applicants fail this in under 60 seconds.</p>
+            <h4 className="text-sm font-semibold text-[#1a2744] font-inter">Can You Pass Tolu's HR Screening?</h4>
+            <p className="text-base text-[#4a5568] max-w-2xl mx-auto font-inter">Most applicants fail this in under 60 seconds.</p>
           </div>
 
           <div className="h-64 overflow-y-auto p-4 space-y-4 bg-white">
@@ -155,7 +155,7 @@ const ChatInterface = ({ variant = 'v3' }: ChatInterfaceProps) => {
                         />
                       </div>
                       <div>
-                        <p className="text-sm font-bold text-[#1a2744] mb-2">Tolu</p>
+                        <p className="text-sm font-bold text-[#1a2744] mb-2 font-inter">Tolu</p>
                         <div className="bg-[#e8eaed] rounded-2xl p-4">
                           {renderLines(message.content)}
                         </div>
@@ -163,7 +163,7 @@ const ChatInterface = ({ variant = 'v3' }: ChatInterfaceProps) => {
                     </div>
                   ) : (
                     <div className="bg-[#1a2744] text-white rounded-2xl p-4 max-w-[85%]">
-                      <p className="text-sm">{message.content}</p>
+                      <p className="text-sm font-inter text-white">{message.content}</p>
                     </div>
                   )}
                 </motion.div>
@@ -198,7 +198,7 @@ const ChatInterface = ({ variant = 'v3' }: ChatInterfaceProps) => {
               >
                 <div className="max-w-[85%]">
                   <div className="bg-gradient-to-r from-[#1a2744] to-[#2a3744] rounded-2xl p-3 shadow-lg">
-                    <p className="text-xs text-white/80 mb-3">Choose your response:</p>
+                    <p className="text-xs text-white/80 mb-3 font-inter">Choose your response:</p>
                     <div className="flex flex-wrap gap-2">
                       {options.map((option, idx) => (
                         <motion.button
@@ -207,7 +207,7 @@ const ChatInterface = ({ variant = 'v3' }: ChatInterfaceProps) => {
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ delay: idx * 0.1 }}
-                          className="bg-white/10 backdrop-blur-sm text-white py-2 px-3 rounded-xl text-sm font-medium hover:bg-white/20 transition-all duration-200 border border-white/20 whitespace-nowrap"
+                          className="bg-white/10 backdrop-blur-sm text-white py-2 px-3 rounded-xl text-sm font-medium hover:bg-white/20 transition-all duration-200 border border-white/20 whitespace-nowrap font-inter"
                         >
                           {option}
                         </motion.button>

@@ -27,10 +27,10 @@ const ChatSectionV3 = ({ onJoinClick }: ChatSectionV3Props) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl md:text-4xl font-bold text-[#1a2744] mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-[#1a2744] mb-4 font-inter">
             Can You Pass Tolu's HR Screening?
           </h2>
-          <p className="text-base text-[#4a5568] max-w-2xl mx-auto">
+          <p className="text-base text-[#4a5568] max-w-2xl mx-auto font-inter">
             Most applicants fail this in under 60 seconds.
           </p>
         </motion.div>
@@ -66,10 +66,10 @@ const ChatSectionV3 = ({ onJoinClick }: ChatSectionV3Props) => {
             className="flex justify-center mt-12"
           >
             <div className="rounded-2xl p-5 text-center max-w-md">
-              <Button onClick={onJoinClick} className="w-full py-3 text-sm font-semibold bg-[#ff6b35] hover:bg-[#ff5722] text-white">
+              <Button onClick={onJoinClick} className="w-full py-3 text-sm font-semibold bg-[#ff6b35] hover:bg-[#ff5722] text-white font-inter">
                 Enter WDC Virtual Office
               </Button>
-              <p className="text-xs text-[#475569] mt-3">Join waitlist to get early access.</p>
+              <p className="text-xs text-[#475569] mt-3 font-inter">Join waitlist to get early access.</p>
             </div>
           </motion.div>
         )}
