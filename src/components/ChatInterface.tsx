@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import avatarTolu from '../assets/tolu.jpg';
-import { Button } from '../components/ui/button';
 
 interface Message {
   id: string;
@@ -12,7 +11,6 @@ interface Message {
 
 interface ChatInterfaceProps {
   variant?: 'v3';
-  onJoinClick?: () => void;
 }
 
 const screeningSteps = [
@@ -30,7 +28,7 @@ const screeningSteps = [
 
 const finalAIMessage = `Thanks for answering honestly.\nThe biggest problem most graduates face is this:\nYou can't get a job without experience.\nAnd you can't get experience without a job.\nThat's exactly why we built WDC Labs.\nInside WDC Labs you enter a virtual office where supervisors like me assign real work tasks, review your output, and simulate a real job environment.\nSome people quit on Day 1.\nBut those who stay leave with real experience recruiters respect.`;
 
-const ChatInterface = ({ variant = 'v3', onJoinClick }: ChatInterfaceProps) => {
+const ChatInterface = ({ variant = 'v3' }: ChatInterfaceProps) => {
   const [step, setStep] = useState(1);
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -137,9 +135,9 @@ const ChatInterface = ({ variant = 'v3', onJoinClick }: ChatInterfaceProps) => {
             <p className="text-xs text-[#475569] mt-1">Most applicants fail this in under 60 seconds.</p>
           </div>
 
-          <div className="h-80 overflow-y-auto p-4 space-y-4 bg-white">
+          <div className="h-64 overflow-y-auto p-4 space-y-4 bg-white">
             <AnimatePresence>
-              {messages.map((message) => (
+              {messages.map((message, index) => (
                 <motion.div
                   key={message.id}
                   initial={{ opacity: 0, y: 10 }}
@@ -191,32 +189,38 @@ const ChatInterface = ({ variant = 'v3', onJoinClick }: ChatInterfaceProps) => {
               </motion.div>
             )}
 
+            {/* Interactive Options on User's Side */}
+            {options.length > 0 && !isTyping && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="flex justify-end"
+              >
+                <div className="max-w-[85%]">
+                  <div className="bg-gradient-to-r from-[#1a2744] to-[#2a3744] rounded-2xl p-3 shadow-lg">
+                    <p className="text-xs text-white/80 mb-3">Choose your response:</p>
+                    <div className="flex flex-wrap gap-2">
+                      {options.map((option, idx) => (
+                        <motion.button
+                          key={option}
+                          onClick={() => handleOptionSelect(option)}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: idx * 0.1 }}
+                          className="bg-white/10 backdrop-blur-sm text-white py-2 px-3 rounded-xl text-sm font-medium hover:bg-white/20 transition-all duration-200 border border-white/20 whitespace-nowrap"
+                        >
+                          {option}
+                        </motion.button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+
             <div ref={messagesEndRef} />
           </div>
-
-          {options.length > 0 && !isTyping && (
-            <div className="p-4 space-y-2 bg-[#1a2744]">
-              {options.map((option) => (
-                <button
-                  key={option}
-                  onClick={() => handleOptionSelect(option)}
-                  className="w-full rounded-full bg-white/10 text-white py-2 text-sm font-semibold hover:bg-white/20 transition"
-                >
-                  {option}
-                </button>
-              ))}
-            </div>
-          )}
         </div>
-
-        {step === 3 && (
-          <div className="bg-white shadow-xl rounded-2xl p-5 text-center">
-            <Button onClick={onJoinClick} className="w-full py-3 text-sm font-semibold">
-              Enter WDC Virtual Office
-            </Button>
-            <p className="text-xs text-[#475569] mt-3">Join waitlist to get early access.</p>
-          </div>
-        )}
       </div>
     );
   }
