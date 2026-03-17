@@ -11,6 +11,7 @@ interface Message {
 
 interface ChatInterfaceProps {
   variant?: 'v3';
+  onJoinClick?: () => void;
 }
 
 const screeningSteps = [
@@ -28,7 +29,7 @@ const screeningSteps = [
 
 const finalAIMessage = `Thanks for answering honestly.\nThe biggest problem most graduates face is this:\nYou can't get a job without experience.\nAnd you can't get experience without a job.\nThat's exactly why we built WDC Labs.\nInside WDC Labs you enter a virtual office where supervisors like me assign real work tasks, review your output, and simulate a real job environment.\nSome people quit on Day 1.\nBut those who stay leave with real experience recruiters respect.`;
 
-const ChatInterface = ({ variant = 'v3' }: ChatInterfaceProps) => {
+const ChatInterface = ({ variant = 'v3', onJoinClick }: ChatInterfaceProps) => {
   const [step, setStep] = useState(1);
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -214,6 +215,28 @@ const ChatInterface = ({ variant = 'v3' }: ChatInterfaceProps) => {
                       ))}
                     </div>
                   </div>
+                </div>
+              </motion.div>
+            )}
+
+            {step === 3 && onJoinClick && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+                className="flex justify-center mt-4"
+              >
+                <div className="max-w-[85%]">
+                  <motion.button
+                    onClick={onJoinClick}
+                    whileHover={{ scale: 1.02, y: -2 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="bg-gradient-to-r from-[#ff6b35] to-[#ff5722] text-white px-6 py-3 rounded-2xl font-semibold text-sm shadow-lg hover:shadow-xl transition-all duration-300 font-inter relative overflow-hidden group"
+                  >
+                    <span className="relative z-10">Enter WDC Virtual Office</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#ff5722] to-[#ff6b35] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </motion.button>
+                  <p className="text-xs text-[#475569] mt-2 text-right font-inter">Join waitlist to get early access</p>
                 </div>
               </motion.div>
             )}

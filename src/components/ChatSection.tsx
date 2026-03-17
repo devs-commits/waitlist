@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import ChatInterface from './ChatInterface';
 import ReviewsScroll from './ReviewsScroll';
 import chatBgCircle from './../assets/circle.png';
-import { Button } from '../components/ui/button';
 
 interface ChatSectionV3Props {
   onJoinClick?: () => void;
@@ -53,26 +52,9 @@ const ChatSectionV3 = ({ onJoinClick }: ChatSectionV3Props) => {
             viewport={{ once: true }}
             className="order-1 lg:order-2 w-full max-w-md"
           >
-            <ChatInterface variant="v3" />
+            <ChatInterface variant="v3" onJoinClick={onJoinClick} />
           </motion.div>
         </div>
-        
-        {/* Final CTA Button - Centered at bottom of section */}
-        {onJoinClick && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex justify-center mt-12"
-          >
-            <div className="rounded-2xl p-5 text-center max-w-md">
-              <Button onClick={onJoinClick} className="w-full py-3 text-sm font-semibold bg-[#ff6b35] hover:bg-[#ff5722] text-white font-inter">
-                Enter WDC Virtual Office
-              </Button>
-              <p className="text-xs text-[#475569] mt-3 font-inter">Join waitlist to get early access.</p>
-            </div>
-          </motion.div>
-        )}
       </div>
     </section>
   );
