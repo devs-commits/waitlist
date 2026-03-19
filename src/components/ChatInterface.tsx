@@ -40,6 +40,7 @@ const ChatInterface = ({ variant = 'v3', onJoinClick }: ChatInterfaceProps) => {
     },
   ]);
   const [isTyping, setIsTyping] = useState(false);
+  const [hasInteracted, setHasInteracted] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -47,8 +48,10 @@ const ChatInterface = ({ variant = 'v3', onJoinClick }: ChatInterfaceProps) => {
   };
 
   useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
+    if (hasInteracted) {
+      scrollToBottom();
+    }
+  }, [messages, hasInteracted]);
 
   const renderLines = (text: string) =>
     text.split('\n').map((line, idx) => (
@@ -61,6 +64,8 @@ const ChatInterface = ({ variant = 'v3', onJoinClick }: ChatInterfaceProps) => {
 
   const handleOptionSelect = (option: string) => {
     if (step >= 3) return;
+
+    setHasInteracted(true);
 
     const userMessage: Message = {
       id: Date.now().toString(),
